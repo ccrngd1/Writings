@@ -1,0 +1,59 @@
+{\rtf1\ansi\ansicpg1252\uc1\deff0
+{\fonttbl{\f0\fmodern\fcharset0\fprq2 CourierNewPSMT;}{\f1\fmodern\fcharset0\fprq2 EB Garamond,serif;}{\f2\fmodern\fcharset0\fprq2 Quicksand,sans-serif;}{\f3\fmodern\fcharset0\fprq2 Quicksand,sans-serif;}{\f4\fmodern\fcharset0\fprq2 Quicksand,sans-serif;}}
+{\colortbl;\red0\green0\blue0;\red255\green255\blue255;\red34\green34\blue34;\red0\green0\blue255;}
+\paperw12240\paperh15840\margl1800\margr1800\margt1440\margb1440\fet2\ftnbj\aenddoc
+\pgnrestart\pgnstarts0
+\pard\plain \ltrch\loch {\f1\fs48\b1\i0\cf3\cb2\highlight2 Where and how application data is stored in Ethereum?}
+\par\plain \f1\fs48\b1\i0\cf3\cb2\highlight2
+\par\plain {\field{\*\fldinst HYPERLINK "https://www.lsenta.io/posts/storage-and-dapps-on-ethereum-blockchain/"}{\fldrslt\f0\fs24\ul\ulc0\cf4 https://www.lsenta.io/posts/storage-and-dapps-on-ethereum-blockchain/}}
+\par\plain \f0\fs24\ul\ulc0\cf4
+\par\plain \f0\fs24\ul\ulc0\cf4
+\par\plain {\f0\fs36\b1 The Account Machine}
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 The\~}{\f3\fs24\b0\i1\cf3\cb2\highlight2 Ethereum Software}{\f2\fs24\b0\i0\cf3\cb2\highlight2 \~is a Transaction Processing System: }
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 1. We have a state: the set of all accounts and their balance, }
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 2. We apply one or more transactions, }
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 3. We get a new state: an updated set of accounts and their balances.}
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain {\f4\fs36\b1 Robot Accounts}
+\par\pard\plain \ltrch\loch {\f2\fs24\b0\i0\cf3\cb2\highlight2 Every account has an owner and a balance. }
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 But some of these accounts are special; they own themselves.}
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 At creation time, we give them a piece of code and memory. }
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 A Smart Contract is a smart bank account. I find the}{\f2\fs24\b0\i0\cf3 \~}{\f3\fs24\b0\i1\cf3 Contract}{\f2\fs24\b0\i0\cf3 \~term unclear, think of them as\~}{\f4\fs24\b1\i0\cf3 Robot Accounts}{\f2\fs24\b0\i0\cf3 .}
+\par\plain \f2\fs24\b0\i0\cf3
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 It\loch\af2\hich\af2\dbch\af2\uc1\u8217\'92s a Robot that executes some code when it receives transactions. }
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 This transaction happens within the Blockchain. }
+\par\plain {\f2\fs24\b0\i0\cf3 \line A Smart Contract won\loch\af2\hich\af2\dbch\af2\uc1\u8217\'92t fail because of a power outage in a Datacenter.}
+\par\plain \f2\fs24\b0\i0\cf3
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 A}{\f2\fs24\b0\i0\cf3 \~}{\f3\fs24\b0\i1\cf3 Smart Contract}{\f2\fs24\b0\i0\cf3 \~has a balance, some code, and some storage. This storage is persistent, and that\loch\af2\hich\af2\dbch\af2\uc1\u8217\'92s where we\u8217\'92ll find a DAPP data.}
+\par\plain \f2\fs24\b0\i0\cf3
+\par\pard\plain \ltrch\loch {\f2\fs24\b0\i0\cf3\cb2\highlight2 These\~}{\f3\fs24\b0\i1\cf3\cb2\highlight2 Robot\loch\af3\hich\af3\dbch\af3\uc1\u8217\'92s Actions}{\f2\fs24\b0\i0\cf3\cb2\highlight2 \~are instructions in the\~}{\f3\fs24\b0\i1\cf3\cb2\highlight2 Ethereum Virtual Machine}{\f2\fs24\b0\i0\cf3\cb2\highlight2 \~(EVM).}
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 There are instructions to read in storage, instructions to write, etc. }
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 They all have a cost in gas, and that cost will constrain how much storage we may use.}
+\par\pard\plain \ltrch\loch \f2\fs24\b0\i0\cf3
+\par\pard\plain \ltrch\loch {\f4\fs36\b1 Storage of Robot Accounts}
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 It\loch\af2\hich\af2\dbch\af2\uc1\u8217\'92s a big dictionary (key-value store) that maps keys to values. Keys are strings of 32 bytes. We can have 2^(}{\f2\fs24\b0\i0\cf3\cb2\highlight2 32 x 8) bits}{\f2\fs24\b0\i0\cf3\cb2\highlight2 \~= 2^}{\f2\fs24\b0\i0\cf3\cb2\highlight2 256}{\f2\fs24\b0\i0\cf3\cb2\highlight2 \~different keys. Same for values.}
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 It\loch\af2\hich\af2\dbch\af2\uc1\u8217\'92s like a Redis, RocksDB or LevelDB storage.}
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 2^}{\f2\fs24\b0\i0\cf3\cb2\highlight2 256}{\f2\fs24\b0\i0\cf3\cb2\highlight2 \~keys x 32 bytes (values) is around 10^}{\f2\fs24\b0\i0\cf3\cb2\highlight2 63}{\f2\fs24\b0\i0\cf3\cb2\highlight2 \~PETABYTES. You would need billions of time the age of the universe to go through this amount of data with an SSD. }
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 We can assume there\loch\af2\hich\af2\dbch\af2\uc1\u8217\'92s no storage limit for a DAPP.}
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain {\f4\fs36\b1 DAPP Fuel}
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 For every transaction, we add some Ether}
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 The emitter of the transaction pays this tax to motivate the miners to process the transaction. Miners ensure the network is reliable and we reward them with some Ether.\~}{\f3\fs24\b0\i1\cf3\cb2\highlight2 Gas}{\f2\fs24\b0\i0\cf3\cb2\highlight2 \~is the fuel of the Ethereum Machine.}
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain {\f4\fs36\b1 Storage Cost}
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 The cost of each instruction in a Smart Contract will limit the amount of storage it uses. }
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\plain {\f2\fs24\b0\i0\cf3\cb2\highlight2 Ethereum allows for a theoretically infinite storage space, BUT you have to provide gas for every read/write operation.}
+\par\plain \f2\fs24\b0\i0\cf3\cb2\highlight2
+\par\pard\plain \ltrch\loch {\f3\fs24\b0\i1\cf3 1. You can read from the Blockchain for free}{\f2\fs24\b0\i0\cf3 \line If you install the Ethereum client and you get into the network. Even without mining, the client will synchronize all the blockchain data. All the data of every DAPP on Ethereum is then available on your machine, without any gas cost.}
+\par\plain \f2\fs24\b0\i0\cf3
+\par\plain {\f3\fs24\b0\i1\cf3 2. Storage Costs doesn\loch\af3\hich\af3\dbch\af3\uc1\u8217\'92t depend on duration}{\f2\fs24\b0\i0\cf3 \line Each member of the network may replay the entire history of transactions. By design, the data stored in Ethereum is never deleted, so there\loch\af2\hich\af2\dbch\af2\uc1\u8217\'92s no benefit to removing a key-value.}}

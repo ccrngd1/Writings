@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.16.0" Device="L-2R43NF2" Modified="2020-02-07 15:36:46 -0500" ModID="EB646D18-8126-4E68-9607-E8EE1B0DD840">
+    <Binder>
+        <BinderItem ID="0" UUID="27C848B9-92F1-4FE6-85FA-079AFD80A09F" Created="2020-02-04 10:52:53 -0500" Modified="2020-02-04 10:52:53 -0500" Type="DraftFolder">
+            <Title>Draft</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="3" UUID="039BA8EF-7718-410D-9644-0A26E631DDC1" Created="2020-02-04 10:52:53 -0500" Modified="2020-02-07 13:04:04 -0500" Type="Text">
+                    <Title>Introduction</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <PageBreakBefore>Yes</PageBreakBefore>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1669,0</TextSelection>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="10" UUID="74BAC98D-3730-4B86-9058-7FF0376A105F" Created="2020-02-04 15:18:33 -0500" Modified="2020-02-07 13:43:12 -0500" Type="Text">
+                    <Title>What is the problem of breaking changes?</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>rtf</FileExtension>
+                        <PageBreakBefore>Yes</PageBreakBefore>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>5981,0</TextSelection>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="9" UUID="1F1F99A2-848B-49FD-9F4E-37B9382BDCAB" Created="2020-02-04 15:02:25 -0500" Modified="2020-02-04 15:18:22 -0500" Type="Text">
+                    <Title>What is 'Additive Only' Development</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <PageBreakBefore>Yes</PageBreakBefore>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>38,0</TextSelection>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="11" UUID="92580DB6-79ED-4F1F-9447-85FF2BED2D06" Created="2020-02-04 15:38:17 -0500" Modified="2020-02-04 15:38:17 -0500" Type="Text">
+                    <Title></Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="1" UUID="85E175FE-9665-4392-A886-AEA97B71CCEA" Created="2020-02-04 10:52:53 -0500" Modified="2020-02-04 10:52:53 -0500" Type="ResearchFolder">
+            <Title>Research</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="5" UUID="E5EF00CF-87C2-406D-95A0-19FCAE003F3B" Created="2020-02-04 10:56:31 -0500" Modified="2020-02-07 08:13:16 -0500" Type="Text">
+                    <Title>breaking changes</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>rtf</FileExtension>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1917,0</TextSelection>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="6" UUID="9D0C219B-9754-4DD8-9703-4F8FD46FC475" Created="2020-02-04 10:57:37 -0500" Modified="2020-02-04 10:58:05 -0500" Type="Text">
+                    <Title>example additive</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1964,0</TextSelection>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="7" UUID="1D46D0AE-CD35-47B2-81E1-75FE43BE7A08" Created="2020-02-04 10:58:15 -0500" Modified="2020-02-04 10:59:04 -0500" Type="Text">
+                    <Title>A &quot;breaking change&quot; is any change that requires</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>813,0</TextSelection>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="8" UUID="4BD1C8A0-F075-4247-92E5-C7437A977F85" Created="2020-02-04 10:59:11 -0500" Modified="2020-02-04 10:59:19 -0500" Type="Text">
+                    <Title>Links</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>335,0</TextSelection>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="12" UUID="14F66C15-2625-4B72-940F-40566B692AC7" Created="2020-02-07 13:28:25 -0500" Modified="2020-02-07 13:28:29 -0500" Type="Folder">
+                    <Title>Images</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="13" UUID="D8059E4C-6069-40C1-B95B-38617CBA5BCB" Created="2020-02-07 13:29:47 -0500" Modified="2020-02-07 13:29:47 -0500" Type="Image">
+                            <Title>MissingImage</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="2" UUID="F1B17C34-5A32-4213-9D1E-3AEFF05278CE" Created="2020-02-04 10:52:53 -0500" Modified="2020-02-04 10:52:53 -0500" Type="TrashFolder">
+            <Title>Trash</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="4" UUID="58D81138-B777-46CD-BCB3-D2797CAD7CB9" Created="2020-02-04 10:54:42 -0500" Modified="2020-02-04 10:56:11 -0500" Type="Folder">
+                    <Title>Additive Only - Explained</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+    </Binder>
+    <LabelSettings>
+        <Title>Label</Title>
+        <DefaultLabelID>-1</DefaultLabelID>
+        <Labels>
+            <Label ID="-1">No Label</Label>
+            <Label ID="0" Color="0.752941 0.752941 1.000000">Concept</Label>
+            <Label ID="1" Color="1.000000 0.752941 0.752941">Chapter</Label>
+        </Labels>
+    </LabelSettings>
+    <StatusSettings>
+        <Title>Status</Title>
+        <DefaultStatusID>-1</DefaultStatusID>
+        <StatusItems>
+            <Status ID="-1">No Status</Status>
+            <Status ID="0">N/A</Status>
+            <Status ID="1">To Do</Status>
+            <Status ID="2">First Draft</Status>
+            <Status ID="3">Revised Draft</Status>
+            <Status ID="4">Final Draft</Status>
+            <Status ID="5">Done</Status>
+        </StatusItems>
+    </StatusSettings>
+    <ProjectTargets>
+        <DraftTarget Type="Words" CountIncludedOnly="No" CurrentCompileGroupOnly="No">0</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="No" ResetType="Midnight" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="Yes" WritingDays="">0</SessionTarget>
+        <PreviousSession Words="73" Characters="410" Date="2020-02-07 13:26:16 -0500"/>
+    </ProjectTargets>
+    <Collections>
+        <Collection Type="Binder" ID="9666CF49-B394-4472-9619-1BF969DB286A" Color="0.901961 0.917647 0.933333">
+            <Title>Binder</Title>
+        </Collection>
+        <Collection Type="RecentSearch" ID="42490DCB-1302-4297-A0DE-DCBFC9B83997" Color="0.901961 0.901961 0.980392">
+            <Title>Search Results</Title>
+            <SearchSettings Operator="Exact" Type="All" Scope="All" CompileSetting="All" CaseSensitive="No"></SearchSettings>
+        </Collection>
+    </Collections>
+    <PrintSettings PaperType="Letter" LeftMargin="11.9906" RightMargin="11.9906" TopMargin="11.9906" BottomMargin="11.9906" Orientation="Portrait" Collates="No" ReverseOrder="No"/>
+</ScrivenerProject>

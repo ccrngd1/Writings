@@ -1,0 +1,151 @@
+{\rtf1\ansi\ansicpg1252\uc1\deff0
+{\fonttbl{\f0\fmodern\fcharset0\fprq2 CourierNewPSMT;}{\f1\fmodern\fcharset0\fprq2 CourierNewPS-BoldMT;}}
+{\colortbl;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
+\paperw12240\paperh15840\margl1800\margr1800\margt1440\margb1440\fet2\ftnbj\aenddoc
+\pgnrestart\pgnstarts0
+\pard\plain \ltrch\loch {\field{\*\fldinst HYPERLINK "https://pegasys.tech/ethereum-explained-merkle-trees-world-state-transactions-and-more/"}{\fldrslt\f0\fs24\ul\ulc0\cf3 https://pegasys.tech/ethereum-explained-merkle-trees-world-state-transactions-and-more/}}
+\par\pard\plain \fi360\ltrch\loch \f0\fs24\b0\i0
+\par\plain \f0\fs24\b0\i0
+\par\pard\plain \ltrch\loch {\f1\fs36\b1 Merkle Trees}
+\par\plain \f1\fs36\b1
+\par\plain {\f0\fs24\b0 In a Merkle tree, the leaf nodes contain the hash of a block of data and the non-leaf nodes contain the hash of its children nodes}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 Any change to the underlying data causes the hash of the node referring to the data to change, which causes parent nodes hash to change as well, up the tree to the root.}
+\par\plain {\f0\fs24\b0 This gives us 2 things:}
+\par\plain {\f0\fs24\b0 1-dont need to compare all data across the leaf nodes to know if they have the same data - just compare root node hash}
+\par\plain {\f0\fs24\b0 2-if we need to prove specific data is part of the tree, can perform Merkel proofs}
+\par\plain \f0\fs24\b0
+\par\plain \f0\fs24\b0
+\par\plain {\f1\fs36\b1 World State}
+\par\plain {\f0\fs24\b0 Is a mapping between addresses (accounts) and account states.}
+\par\plain {\f0\fs24\b0 Is not stored on the blockchain but is stored in trie}
+\par\plain \f0\fs24\b0
+\par\plain {\f1\fs36\b1 Account State}
+\par\plain {\f0\fs24\b0 nonce}
+\par\plain {\f0\fs24\b0 Number of transactions sent from this address (if this is an External Owned Account \endash  EOA) or the number of contract-creations made by this account (don\loch\af0\hich\af0\dbch\af0\uc1\u8217\'92t worry about what contract-creations means for now).}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 balance}
+\par\plain {\f0\fs24\b0 Total Ether (in Wei) owned by this account.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 storageRoot}
+\par\plain {\f0\fs24\b0 Hash of the root node of the account storage trie (we\loch\af0\hich\af0\dbch\af0\uc1\u8217\'92ll see what the account storage is in a moment).}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 codeHash}
+\par\plain {\f0\fs24\b0 For contract accounts, hash of the EVM code of this account. For EOAs, this will be empty.}
+\par\plain \f0\fs24\b0
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 Nonce, balance, storageRoot are mutable - are updated by EVM}
+\par\plain {\f0\fs24\b0 CodeHash is immutable -meaning you can\loch\af0\hich\af0\dbch\af0\uc1\u8217\'92t alter contract}
+\par\plain \f0\fs24\b0
+\par\plain \f0\fs24\b0
+\par\plain {\f1\fs36\b1 Transaction}
+\par\plain {\f0\fs24\b0 2 types:}
+\par\plain {\f0\fs24\b0 1a)Transaction that transfer value}
+\par\plain {\f0\fs24\b0 1b)Transaction that send message call}
+\par\plain {\f0\fs24\b0 2)Transactions that deploy contract}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 nonce}
+\par\plain {\f0\fs24\b0 Number of transactions sent by the account that created the transaction.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 gasPrice}
+\par\plain {\f0\fs24\b0 Value (in Wei) that will be paid per unit of gas for the computation costs of executing this transaction.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 gasLimit}
+\par\plain {\f0\fs24\b0 Maximum amount of gas to be used while executing this transaction.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 to}
+\par\plain {\f0\fs24\b0 If this transaction is transferring Ether, address of the EOA account that will receive a value transfer.}
+\par\plain {\f0\fs24\b0 If this transaction is sending a message to a contract (e.g., calling a method in the smart contract), this is address of the contract.}
+\par\plain {\f0\fs24\b0 If this transactions is creating a contract, this value is always empty.}
+\par\plain {\f0\fs24\b0 value}
+\par\plain {\f0\fs24\b0 If this transaction is transferring Ether, amount in Wei that will be transferred to the recipient account.}
+\par\plain {\f0\fs24\b0 If this transaction is sending a message to a contract, amount of Wei payable by the smart contract receiving the message.}
+\par\plain {\f0\fs24\b0 If this transaction is creating a contract, this is the amount of Wei that will be added to the balance of the created contract.}
+\par\plain {\f0\fs24\b0 v, r, s}
+\par\plain {\f0\fs24\b0 Values used in the cryptographic signature of the transaction used to determine the sender of the transaction.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 data}
+\par\plain {\f0\fs24\b0 (only for value transfer and sending a message call to a smart contract)}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 Input data of the message call (e.g., imagine you are trying to execute a setter method in your smart contract, the data field would contain the identifier of the setter method and the value that should be passed as parameter).}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 init}
+\par\plain {\f0\fs24\b0 (only for contract creation)}
+\par\plain \f0\fs24\b0
+\par\plain \f0\fs24\b0
+\par\plain {\f1\fs36\b1 Block}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 Consists of block header and block body}
+\par\plain \f0\fs24\b0
+\par\plain {\f1\fs24\b1 Block Body}
+\par\plain {\f0\fs24\b0 Contains list of transaction included in this block and list of uncle (ommer) block headers}
+\par\plain \f0\fs24\b0
+\par\plain {\f1\fs24\b1 Block header}
+\par\plain {\f0\fs24\b0 parentHash}
+\par\plain {\f0\fs24\b0 Hash of the block header from the previous block. Each block contains a hash of the previous block, all the way to the first block in the chain. This is how all the data is protected against modifications (any modification in a previous block would change the hash of all blocks after the modified block).}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 ommersHash}
+\par\plain {\f0\fs24\b0 Hash of the uncle blocks headers part of the block body.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 beneficiary}
+\par\plain {\f0\fs24\b0 Ethereum account that will get fees for mining this block.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 stateRoot}
+\par\plain {\f0\fs24\b0 Hash of the root node of the world state trie (after all transactions are executed).}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 transactionsRoot}
+\par\plain {\f0\fs24\b0 Hash of the root node of the transactions trie. This trie contains all transactions in the block body.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 receiptsRoot}
+\par\plain {\f0\fs24\b0 Every time a transaction is executed, Ethereum generates a transaction receipt that contains information about the transaction execution. This field is the hash of the root node of the transactions receipt trie.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 logsBloom}
+\par\plain {\f0\fs24\b0 Bloom filter that can be used to find out if logs were generated on transactions in this block (if you want more details, check this Stack Overflow answer). This avoids storing of logs in the block (saving a lot of space).}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 difficult}
+\par\plain {\f0\fs24\b0 Difficulty level of this block. This is a measure of how hard it was to mine this block (I\loch\af0\hich\af0\dbch\af0\uc1\u8217\'92m not diving into the details of how this is calculated in this post).}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 number}
+\par\plain {\f0\fs24\b0 Number of ancestor blocks. This represents the height of the chain (how many blocks are in the chain). The genesis block has number zero.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 gasLimit}
+\par\plain {\f0\fs24\b0 Each transaction consumes gas. The gas limit specifies the maximum gas that can be used by the transactions included in the block. It is a way to limit the number of transactions in a block.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 gasUsed}
+\par\plain {\f0\fs24\b0 Sum of the gas cost of each transaction in the block.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 timestamp}
+\par\plain {\f0\fs24\b0 Unix timestamp when the block was created. Note that due to the decentralized nature of Ethereum, we can\loch\af0\hich\af0\dbch\af0\uc1\u8217\'92t trust in this value, especially when implementing smart contracts that have time related business logic.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 extraData}
+\par\plain {\f0\fs24\b0 Arbitrary byte array that can contain anything. When a miner is creating the block, it can choose to add anything in this field.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 mixHash}
+\par\plain {\f0\fs24\b0 Hash used to verify that a block has been mined properly (if you want to really understand this, read about the Ethash proof-of-work function).}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 nonce}
+\par\plain {\f0\fs24\b0 Same as the mixHash, this value is used to verify that a block has been mined properly}
+\par\plain \f0\fs24\b0
+\par\plain \f0\fs24\b0
+\par\plain \f0\fs24\b0
+\par\plain {\f1\fs36\b1 Conclusion}
+\par\plain {\f0\fs24\b0 Let\loch\af0\hich\af0\dbch\af0\uc1\u8217\'92s do a quick recap about what we just saw! Basically, Ethereum has 4 types of tries:}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 1 The world state trie contains the mapping between addresses and account states. The hash of the root node of the world state trie is included in a block (in the stateRoot field) to represent the current state when that block was created. We only have one world state trie.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 2 The account storage trie contains the data associated to a smart contract. The hash of the root node of the Account storage trie is included in the account state (in the storageRoot field). We have one Account storage trie for each account.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 3 The transaction trie contains all the transactions included in a block. The hash of the root node of the Transaction trie is included in the block header (in the transactionsRoot field). We have one transaction trie per block.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 4 The transaction receipt trie contains all the transaction receipts for the transactions included in a block. The hash of the root node of the transaction receipts trie is included in also included in the block header (in the receiptsRoot field); We have one transaction receipts trie per block.}
+\par\plain \f0\fs24\b0
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 And the objects that we discussed today are:}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 1 World state: the hard drive of the distributed computer that is Ethereum. It is a mapping between addresses and account states.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 2 Account state: stores the state of each one of Ethereum\loch\af0\hich\af0\dbch\af0\uc1\u8217\'92s accounts. It also contains the storageRoot of the account state trie, that contains the storage data for the account.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 3 Transaction: represents a state transition in the system. It can be a funds transfer, a message call or a contract deployment.}
+\par\plain \f0\fs24\b0
+\par\plain {\f0\fs24\b0 4 Block: contains the link to the previous block (parentHash) and contains a group of transactions that, when executed, will yield the new state of the system. It also contains the stateRoot, the transactionRoot and the receiptsRoot, the hash of the root nodes of the world state trie, the transaction trie and the transaction receipts trie, respectively.}}

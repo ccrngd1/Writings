@@ -1,0 +1,16 @@
+{\rtf1\ansi\ansicpg1252\uc1\deff0
+{\fonttbl{\f0\fmodern\fcharset0\fprq2 CourierNewPSMT;}}
+{\colortbl;\red0\green0\blue0;\red255\green255\blue255;}
+\paperw12240\paperh15840\margl1800\margr1800\margt1440\margb1440\fet2\ftnbj\aenddoc
+\pgnrestart\pgnstarts0
+\pard\plain \fi360\ltrch\loch {\f0\fs24\b0\i0 The first part of this book was focused on how a blockchain, or Ethereum in particular, works behind the scenes.  It does not get delve too deeply into the advanced concepts of the blockchain, but should paint a very clear picture of transactions flow through and how to interact with it on a conceptual level.  }
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 The second part of this book is dedicated to setting up a new, private, Ethereum network and a dedicated developers machine to interact with it.  While this implementation section can be read without having read the previous section, it is recommended to have a fundamental understanding of its inner workings.  If not, the node setup, the configurations, and the integrations using the remote console will be incredibly confusing and will most likely result in errors.}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 In this section, we will be setting up two different environments.}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 The first environment is the private Ethereum network.  This network will consist of a boot node, a normal node, some miners, some swarm nodes, and a couple machines dedicated to monitoring.  These are all defined as docker containers and orchestrated via Docker Compose.  They will be spun in with \loch\af0\hich\af0\dbch\af0\uc1\u8216\'91docker compose up\u8217\'92 with the appropriate ports exposed to allow connecting to the nodes and visualization sites.  It is intended for this to be an entirely self contained network that does not required outside intervention, so once the nodes are up and running, it will be highly reliable test network.}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 The second environment will be VM that is equipped with all the tooling and resources necessary to get up and running quickly with smart contract development.  It will also contain tools for remotely connecting to the Ethereum network running in Docker.}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 For this second section, all examples will be shown from a Ubuntu 18 machine and will assume that needed tools have not yet been installed.  Ideally, a reader will be able to go from a bare bones Ubuntu installation to a fully functional example by the end of this section. Mac is also an acceptable OS to try all of this on (and many of the scripts supplied will have a Linux and Mac version).  However, Windows will not work.  Due to incompatibility between Docker, HyperV, VirtualBox, and Vagrant it isn\loch\af0\hich\af0\dbch\af0\uc1\u8217\'92t possible to run these systems on Windows machines.}}

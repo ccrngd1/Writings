@@ -1,0 +1,1218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrivenerProject Template="No" Version="1.5" Creator="SCRWIN-1.9.14.0" Device="L-2R43NF2" Modified="2019-09-27 11:53:57 -0400" ModID="CDAF57E8-9486-4CDC-A3B5-7F10C582261F">
+    <Binder>
+        <BinderItem ID="0" UUID="41A42293-C092-401A-8017-26BDAFB8D62B" Created="2015-04-19 01:22:32 -0400" Modified="2015-04-19 01:22:32 -0400" Type="DraftFolder">
+            <Title>Draft</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="10" UUID="2D0582C8-7A21-420D-BCB1-B8BDF15DF476" Created="2015-04-19 01:22:32 -0400" Modified="2019-09-23 12:15:38 -0400" Type="Folder">
+                    <Title>Introduction to Blockchain and Ethereum</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <PageBreakBefore>Yes</PageBreakBefore>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="91" UUID="FAFF4BC1-21FC-4DEB-90E8-87FF26042AED" Created="2019-09-18 09:31:23 -0400" Modified="2019-09-23 12:15:04 -0400" Type="Text">
+                            <Title>Introducing blockchain</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>rtf</FileExtension>
+                                <PageBreakBefore>Yes</PageBreakBefore>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1661,0</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="93" UUID="D9FE593A-E42F-4251-B4CF-FFDD6BD7A021" Created="2019-09-18 09:32:20 -0400" Modified="2019-09-23 12:15:05 -0400" Type="Text">
+                            <Title>Introducing Ethereum</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>rtf</FileExtension>
+                                <PageBreakBefore>Yes</PageBreakBefore>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2172,0</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="95" UUID="CFA41374-2AC4-4595-97D4-A752C35E180F" Created="2019-09-18 09:33:48 -0400" Modified="2019-09-23 12:15:39 -0400" Type="Folder">
+                            <Title> Parts of Ethereum</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <PageBreakBefore>Yes</PageBreakBefore>
+                            </MetaData>
+                            <TextSettings>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="107" UUID="B34E11A9-056C-4F3E-8207-81A210A2F89E" Created="2019-09-18 11:02:26 -0400" Modified="2019-09-23 12:15:07 -0400" Type="Text">
+                                    <Title>General</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <PageBreakBefore>Yes</PageBreakBefore>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>392,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="136" UUID="1794614A-E510-4C04-8993-BF1587057FE8" Created="2019-09-23 12:21:05 -0400" Modified="2019-09-23 12:26:35 -0400" Type="Folder">
+                                    <Title>Physical Architecture</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <PageBreakBefore>Yes</PageBreakBefore>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                    <Children>
+                                        <BinderItem ID="108" UUID="A872A85B-8613-480A-9994-00339AB9A6A2" Created="2019-09-18 11:54:28 -0400" Modified="2019-09-23 12:29:52 -0400" Type="Text">
+                                            <Title>General</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <FileExtension>rtf</FileExtension>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>310,0</TextSelection>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="115" UUID="C00E9088-BD37-4D08-8754-8FC2E143C9D0" Created="2019-09-18 12:08:14 -0400" Modified="2019-09-23 12:23:43 -0400" Type="Text">
+                                            <Title>Nodes and Miners</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="123" UUID="D0FB2B96-72F0-411C-A6E8-97306F66E52D" Created="2019-09-18 13:55:48 -0400" Modified="2019-09-23 12:23:45 -0400" Type="Text">
+                                            <Title>Ethereum Virtual Machine (EVM)</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                    </Children>
+                                </BinderItem>
+                                <BinderItem ID="137" UUID="49189F30-B9EE-4FAA-85C5-618135C73FDC" Created="2019-09-23 12:21:33 -0400" Modified="2019-09-23 12:26:29 -0400" Type="Folder">
+                                    <Title>State Machine</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <PageBreakBefore>Yes</PageBreakBefore>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                    <Children>
+                                        <BinderItem ID="114" UUID="AFDD347C-8E67-4191-B140-51B5D14D58DA" Created="2019-09-18 12:07:55 -0400" Modified="2019-09-23 12:29:34 -0400" Type="Text">
+                                            <Title>General</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="96" UUID="2BBF571E-133A-4A2F-ACE5-E2F75CC8FA8D" Created="2019-09-18 09:34:37 -0400" Modified="2019-09-23 12:23:46 -0400" Type="Text">
+                                            <Title>Blocks</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="97" UUID="71B57219-DBF5-451F-A6EB-5CA7DFADC17A" Created="2019-09-18 09:34:46 -0400" Modified="2019-09-23 12:23:47 -0400" Type="Text">
+                                            <Title>State</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="98" UUID="DC203076-4711-415D-955A-5A9F143F039A" Created="2019-09-18 09:34:51 -0400" Modified="2019-09-23 12:23:47 -0400" Type="Text">
+                                            <Title>Tramsactions</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="99" UUID="9ABF9B7D-CD80-4958-B177-D92A24E0B178" Created="2019-09-18 09:35:24 -0400" Modified="2019-09-23 12:23:49 -0400" Type="Text">
+                                            <Title>Accounts</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>1761,0</TextSelection>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="100" UUID="7B6AC756-74B4-476B-99BB-B72FFAA141B8" Created="2019-09-18 09:35:31 -0400" Modified="2019-09-23 12:23:49 -0400" Type="Text">
+                                            <Title>Addresses</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="104" UUID="7BEEAD03-61A2-452A-8846-C7E165D6B115" Created="2019-09-18 09:37:10 -0400" Modified="2019-09-23 12:23:50 -0400" Type="Text">
+                                            <Title>Ommers-Uncles</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                    </Children>
+                                </BinderItem>
+                                <BinderItem ID="138" UUID="DDEC576A-3944-436A-9BA1-A8D0D5E1A33B" Created="2019-09-23 12:21:53 -0400" Modified="2019-09-23 12:26:31 -0400" Type="Folder">
+                                    <Title>Consensus Mechanism</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <PageBreakBefore>Yes</PageBreakBefore>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                    <Children>
+                                        <BinderItem ID="101" UUID="EEC3810A-C434-4792-B8B9-C1AB11E93FF7" Created="2019-09-18 09:35:39 -0400" Modified="2019-09-23 12:29:43 -0400" Type="Text">
+                                            <Title>General</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <FileExtension>rtf</FileExtension>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>15,0</TextSelection>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="109" UUID="A3092B9E-9696-4DF4-92DE-DDFF4C3C4A3A" Created="2019-09-18 11:55:37 -0400" Modified="2019-09-23 12:23:52 -0400" Type="Text">
+                                            <Title>Proof of Work</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>1439,0</TextSelection>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="111" UUID="D0FC42C2-AF2A-43E3-8E60-7463E3CB6C67" Created="2019-09-18 11:56:00 -0400" Modified="2019-09-23 12:23:52 -0400" Type="Text">
+                                            <Title>Proof of Stake</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>143,0</TextSelection>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="118" UUID="04F7300C-B785-4B62-B0C6-9476A52F3A98" Created="2019-09-18 12:40:48 -0400" Modified="2019-09-23 12:23:54 -0400" Type="Text">
+                                            <Title>Proof of Authority</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>200,0</TextSelection>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                        <BinderItem ID="120" UUID="1BE878AE-2755-46B7-A4FE-E39DF52B1B55" Created="2019-09-18 12:49:43 -0400" Modified="2019-09-23 12:23:53 -0400" Type="Text">
+                                            <Title>GHOST protocol</Title>
+                                            <MetaData>
+                                                <IncludeInCompile>Yes</IncludeInCompile>
+                                                <PageBreakBefore>Yes</PageBreakBefore>
+                                            </MetaData>
+                                            <TextSettings>
+                                                <TextSelection>122,0</TextSelection>
+                                                <Target Type="Words">0</Target>
+                                            </TextSettings>
+                                        </BinderItem>
+                                    </Children>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                        <BinderItem ID="102" UUID="E6C5CAEE-7A3B-490A-9C3F-E40238D3DAE5" Created="2019-09-18 09:36:16 -0400" Modified="2019-09-23 12:23:55 -0400" Type="Folder">
+                            <Title> Contracts</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <PageBreakBefore>Yes</PageBreakBefore>
+                            </MetaData>
+                            <TextSettings>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="12" UUID="C9E080A5-3ECF-4A84-A3A7-486B072A5540" Created="2015-04-19 01:22:32 -0400" Modified="2019-09-23 12:23:56 -0400" Type="Folder">
+                            <Title> References</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <PageBreakBefore>Yes</PageBreakBefore>
+                            </MetaData>
+                            <TextSettings>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                            <CorkboardAndOutliner>
+                                <SelectedSubdocumentIDs>17</SelectedSubdocumentIDs>
+                                <CorkboardSettings/>
+                            </CorkboardAndOutliner>
+                            <Children>
+                                <BinderItem ID="17" UUID="46D00E26-97A2-4252-9E19-EF8822F58276" Created="2015-04-19 01:22:32 -0400" Modified="2019-09-23 12:23:56 -0400" Type="Text">
+                                    <Title>References</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <PageBreakBefore>Yes</PageBreakBefore>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>144,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="127" UUID="65F80A8C-4EBD-4FCB-BA6B-8253BC6CB0E8" Created="2019-09-23 09:53:47 -0400" Modified="2019-09-23 12:23:58 -0400" Type="Folder">
+                    <Title>Setting up your own private Ethereum network</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <PageBreakBefore>Yes</PageBreakBefore>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="129" UUID="B1F7AEE2-10A9-430F-926B-901285401418" Created="2019-09-23 09:56:26 -0400" Modified="2019-09-24 10:18:43 -0400" Type="Text">
+                            <Title>Overview of project</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <PageBreakBefore>Yes</PageBreakBefore>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2270,0</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="130" UUID="F75EB069-B122-4878-8B4A-A4A6B4DA548F" Created="2019-09-23 09:56:40 -0400" Modified="2019-09-24 16:14:38 -0400" Type="Text">
+                            <Title>Resources Needed</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <PageBreakBefore>Yes</PageBreakBefore>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>804,0</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="133" UUID="A69DE8D8-9C82-41D5-9F32-EEDBDDA134BC" Created="2019-09-23 09:57:25 -0400" Modified="2019-09-23 12:23:59 -0400" Type="Folder">
+                            <Title>Ethereum network</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <PageBreakBefore>Yes</PageBreakBefore>
+                            </MetaData>
+                            <TextSettings>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="141" UUID="542FEB6D-3575-4D8F-9162-64CF26E1A959" Created="2019-09-24 10:50:18 -0400" Modified="2019-09-25 08:04:15 -0400" Type="Text">
+                                    <Title>Install</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <FileExtension>rtf</FileExtension>
+                                        <PageBreakBefore>Yes</PageBreakBefore>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>624,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="131" UUID="4B07A1D7-8347-4B05-871D-B9D2E5BA9339" Created="2019-09-23 09:56:59 -0400" Modified="2019-09-24 16:08:13 -0400" Type="Text">
+                                    <Title>Explore</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <FileExtension>rtf</FileExtension>
+                                        <PageBreakBefore>Yes</PageBreakBefore>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>5858,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                        <BinderItem ID="132" UUID="2B41C408-3A1A-45D7-BBC4-6B01A52A053F" Created="2019-09-23 09:57:06 -0400" Modified="2019-09-23 12:24:00 -0400" Type="Folder">
+                            <Title>Developer Machine</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <PageBreakBefore>Yes</PageBreakBefore>
+                            </MetaData>
+                            <TextSettings>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="140" UUID="B0A5C9DD-636D-47B0-A770-BEE832C5934C" Created="2019-09-24 10:49:37 -0400" Modified="2019-09-24 15:56:23 -0400" Type="Text">
+                                    <Title>Install</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <FileExtension>rtf</FileExtension>
+                                        <PageBreakBefore>Yes</PageBreakBefore>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>2,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="134" UUID="ABB2112E-3B36-41A4-B5DD-675B95FBFE74" Created="2019-09-23 09:57:46 -0400" Modified="2019-09-24 16:08:56 -0400" Type="Text">
+                                    <Title>Explore</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <PageBreakBefore>Yes</PageBreakBefore>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>988,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                        <BinderItem ID="128" UUID="7BC83A6B-B951-4E8B-A4DE-93DB713C1EA8" Created="2019-09-23 09:55:20 -0400" Modified="2019-09-23 12:24:03 -0400" Type="Folder">
+                            <Title>References</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <PageBreakBefore>Yes</PageBreakBefore>
+                            </MetaData>
+                            <TextSettings>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="139" UUID="F3FB125F-1442-4F03-B4AB-F9C6BC782130" Created="2019-09-23 12:27:10 -0400" Modified="2019-09-23 12:28:28 -0400" Type="Text">
+                                    <Title>General info</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>729,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="14" UUID="6155BA13-2AE3-4A97-B4DF-E18BB3900931" Created="2015-04-19 01:22:32 -0400" Modified="2019-09-23 12:24:05 -0400" Type="Folder">
+                    <Title>Revisions</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <PageBreakBefore>Yes</PageBreakBefore>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                    <CorkboardAndOutliner>
+                        <SelectedSubdocumentIDs>27</SelectedSubdocumentIDs>
+                        <CorkboardSettings/>
+                    </CorkboardAndOutliner>
+                    <Children>
+                        <BinderItem ID="27" UUID="536E0D21-85A0-4C7C-A93C-AA39FDD862D3" Created="2015-04-19 01:22:32 -0400" Modified="2019-09-23 12:24:05 -0400" Type="Text">
+                            <Title>Version 1 - Aug 2019</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <PageBreakBefore>Yes</PageBreakBefore>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2,0</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="126" UUID="D55C6739-9CC6-419D-9FEA-9414A43A79A8" Created="2019-09-18 14:02:36 -0400" Modified="2019-09-23 12:24:06 -0400" Type="Text">
+                            <Title>Version 2 - ?? 20??</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <PageBreakBefore>Yes</PageBreakBefore>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2,0</TextSelection>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="1" UUID="112FBFD6-5549-4C67-8B55-AF528CAAE76A" Created="2015-04-19 01:22:32 -0400" Modified="2015-04-19 01:22:32 -0400" Type="ResearchFolder">
+            <Title>Research</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <CorkboardAndOutliner>
+                <SelectedSubdocumentIDs>24</SelectedSubdocumentIDs>
+                <CorkboardSettings/>
+            </CorkboardAndOutliner>
+            <Children>
+                <BinderItem ID="18" UUID="C914B63B-BBF0-48D2-9D67-79F9DBBC2587" Created="2015-04-19 01:22:32 -0400" Modified="2015-04-19 01:22:32 -0400" Type="Folder">
+                    <Title>Links</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="22" UUID="94F30FF9-058B-42B3-B62B-3389D817846C" Created="2015-04-19 01:22:32 -0400" Modified="2015-04-25 18:44:09 -0400" Type="Folder">
+                    <Title>Documents</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="35" UUID="1100ED2B-D66E-4CFF-8290-49FAC21F9952" Created="2019-08-29 11:18:03 -0400" Modified="2019-08-29 11:18:17 -0400" Type="Folder">
+                            <Title>DApps</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="34" UUID="FD31C4FC-55BB-45B3-9928-1A521234D993" Created="2019-08-29 11:17:30 -0400" Modified="2019-08-30 10:49:13 -0400" Type="Text">
+                                    <Title>Building a fully decentralized user profile app</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <FileExtension>rtf</FileExtension>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>176,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="40" UUID="BCD31F18-A630-4D34-9BDD-F811120AEA38" Created="2019-08-30 12:41:48 -0400" Modified="2019-08-30 13:03:20 -0400" Type="Text">
+                                    <Title>What and how application data is stored in Ethereum</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>2460,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                        <BinderItem ID="38" UUID="0BC98425-DE06-4B7B-9244-F30AA079C165" Created="2019-08-30 11:14:12 -0400" Modified="2019-08-30 11:14:17 -0400" Type="Folder">
+                            <Title>Eth</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="39" UUID="A3D41ADE-88D8-4401-9FD5-007B8C7E4FBE" Created="2019-08-28 09:41:25 -0400" Modified="2019-08-28 09:41:25 -0400" Type="PDF">
+                                    <Title>YellowPaper</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <FileExtension>pdf</FileExtension>
+                                    </MetaData>
+                                    <MediaSettings>
+                                        <CurrentPDFPage>1</CurrentPDFPage>
+                                    </MediaSettings>
+                                </BinderItem>
+                                <BinderItem ID="37" UUID="10F46CCA-DECD-4904-970B-80E9211722CA" Created="2019-08-30 11:14:06 -0400" Modified="2019-08-30 12:41:22 -0400" Type="Text">
+                                    <Title>What are Ethereum Uncles</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>2055,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="41" UUID="E36BCC1B-6A50-4ACA-AB99-5AC9501D50D2" Created="2019-08-30 13:04:30 -0400" Modified="2019-08-30 13:08:38 -0400" Type="Text">
+                                    <Title>blockchain, whats the point for the developer</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>688,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="42" UUID="6821CAA2-6F60-4CB1-8AEF-05C3BED6FA1F" Created="2019-08-30 13:09:20 -0400" Modified="2019-09-01 21:17:58 -0400" Type="Text">
+                                    <Title>Getting deep into ethereum: how data is stored in ethereum</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>986,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="48" UUID="B9F5EDD1-D12C-49BC-9C5C-2158861A148C" Created="2019-09-01 21:34:46 -0400" Modified="2019-09-02 19:53:56 -0400" Type="Text">
+                                    <Title>Getting deep into EVM</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>4280,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="59" UUID="2698AB73-2A11-4A50-8B5E-3BA126DB08B1" Created="2019-09-02 20:00:29 -0400" Modified="2019-09-02 20:00:59 -0400" Type="Text">
+                                    <Title>Helpful commands</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>41,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="60" UUID="5FC5AC0D-B4CE-4D1C-AD48-2A05B77D6A8A" Created="2019-09-02 20:02:52 -0400" Modified="2019-09-02 20:11:53 -0400" Type="Text">
+                                    <Title>How to store data on ethereum</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>1069,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="62" UUID="67E0B025-C25B-410E-B818-87B6EAF485C4" Created="2019-09-02 20:12:49 -0400" Modified="2019-09-02 20:26:19 -0400" Type="Text">
+                                    <Title>Ethereum accounts</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>538,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="63" UUID="6A7E9F8D-A8DD-4A56-ABFB-EB17F8D08D59" Created="2019-09-02 20:34:53 -0400" Modified="2019-09-12 14:24:03 -0400" Type="Text">
+                                    <Title>How does ethereum work anyway</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>2632,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="74" UUID="BB907C26-7BF1-430E-8473-AAAC0A9C856B" Created="2019-09-12 14:28:25 -0400" Modified="2019-09-12 14:41:06 -0400" Type="Text">
+                                    <Title>Ethereum Explained</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>135,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="84" UUID="51D62785-347E-4DE9-9024-07BCE7E55DAF" Created="2019-09-12 15:44:56 -0400" Modified="2019-09-16 08:21:36 -0400" Type="Text">
+                                    <Title>Life cycle of ethereum transaction</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>3205,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="88" UUID="52F3D8D0-2484-465D-821E-50E72189CC03" Created="2019-09-16 08:32:23 -0400" Modified="2019-09-18 12:48:39 -0400" Type="Text">
+                                    <Title>Yellow paper</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>1494,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                        <BinderItem ID="89" UUID="140A96E5-D497-4952-AD04-3D62DB27B580" Created="2019-09-17 08:59:59 -0400" Modified="2019-09-17 09:00:02 -0400" Type="Folder">
+                            <Title>Contracts</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <Target Type="Words">0</Target>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="83" UUID="159507CD-D7D5-4674-A29D-82392E08C004" Created="2019-09-12 15:40:54 -0400" Modified="2019-09-17 08:55:57 -0400" Type="Text">
+                                    <Title>General notes</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <FileExtension>rtf</FileExtension>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>2445,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="77" UUID="1E1EE9CC-479B-4749-B7C6-0D4EDB53C4F9" Created="2019-09-12 15:28:11 -0400" Modified="2019-09-12 15:32:11 -0400" Type="Text">
+                                    <Title>Ethereum Smart Contracts</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <FileExtension>rtf</FileExtension>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>75,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="90" UUID="EFD1C1BD-B8F4-4FDB-B95C-02041EDB2AD7" Created="2019-09-17 09:00:15 -0400" Modified="2019-09-17 09:03:10 -0400" Type="Text">
+                                    <Title>Emit events</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>1523,0</TextSelection>
+                                        <Target Type="Words">0</Target>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="24" UUID="5F570322-2FB0-47A8-AD36-9AA16BD8B112" Created="2015-04-19 01:22:32 -0400" Modified="2015-04-25 18:43:50 -0400" Type="Folder">
+                    <Title>Final Versions</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="135" UUID="A6FB60DC-B11F-4166-ADC6-72AD258546FD" Created="2019-09-23 12:01:40 -0400" Modified="2019-09-23 12:01:42 -0400" Type="Other">
+                            <Title>EthereumBlockchain_v1</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>epub</FileExtension>
+                            </MetaData>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="43" UUID="80EDE0E6-9201-4A53-9F5A-F44006A53B9D" Created="2019-08-30 14:32:37 -0400" Modified="2019-08-30 14:32:40 -0400" Type="Folder">
+                    <Title>Images</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <Target Type="Words">0</Target>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="44" UUID="9001E520-320F-4511-8512-A5BBFE112D0C" Created="2019-08-30 14:32:25 -0400" Modified="2019-08-30 14:32:26 -0400" Type="Image">
+                            <Title>DeepInEthere_blockANDtrieRoots</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpeg</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="45" UUID="FDEBB7FE-4397-4451-BF73-60ECDC021311" Created="2019-08-30 14:42:48 -0400" Modified="2019-08-30 14:42:48 -0400" Type="Image">
+                            <Title>DeepInEthere_stateTrie</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="46" UUID="5196751D-1F8B-4608-8F35-62C6FEECF1CB" Created="2019-09-01 21:05:48 -0400" Modified="2019-09-01 21:05:48 -0400" Type="Image">
+                            <Title>DeepInEthere_storageTrie</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="47" UUID="E5E2E5E5-8D60-41FF-B283-445DC5F0287F" Created="2019-09-01 21:13:51 -0400" Modified="2019-09-01 21:13:52 -0400" Type="Image">
+                            <Title>DeepInEthere_transactionTrie</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="49" UUID="5AC7F870-1FB0-4318-A5B1-B2605968960F" Created="2019-09-01 21:38:43 -0400" Modified="2019-09-01 21:38:43 -0400" Type="Image">
+                            <Title>DeepInEVM_vmArch</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="50" UUID="99D6F38C-D39D-4BCF-9EA9-46C4262D3CC7" Created="2019-09-01 21:38:22 -0400" Modified="2019-09-01 21:38:23 -0400" Type="Image">
+                            <Title>DeepInEVM_vmLayer</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="51" UUID="ADF350D3-C33E-424D-AAA1-A41DE440BD55" Created="2019-09-01 21:44:48 -0400" Modified="2019-09-01 21:44:48 -0400" Type="Image">
+                            <Title>DeepInEVM_execution</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="52" UUID="8138203E-5018-40CA-ABA9-06BCC0EB882B" Created="2019-09-01 21:50:52 -0400" Modified="2019-09-01 21:50:52 -0400" Type="Image">
+                            <Title>DeepInEVM_account</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="53" UUID="3E525438-29EF-4566-BE55-4B5852AD9007" Created="2019-09-01 22:01:06 -0400" Modified="2019-09-01 22:01:07 -0400" Type="Image">
+                            <Title>DeepInEVM_accountsCompare</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="54" UUID="DB1E5AC0-F0EC-40F3-A35F-2653F411A481" Created="2019-09-01 22:12:45 -0400" Modified="2019-09-01 22:12:46 -0400" Type="Image">
+                            <Title>DeepInEVM_abi</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="55" UUID="0CDE272D-A97B-476F-A1E0-FFCD498AF25C" Created="2019-09-02 19:24:15 -0400" Modified="2019-09-02 19:24:16 -0400" Type="Image">
+                            <Title>DeepInEVM_msgCaller</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="56" UUID="DEFDA133-29B0-4326-B762-6657D98FF317" Created="2019-09-02 19:38:30 -0400" Modified="2019-09-02 19:38:30 -0400" Type="Image">
+                            <Title>DeepInEVM_machineSpace</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="57" UUID="8C119E3A-A073-4C31-8326-3165F2901C49" Created="2019-09-02 19:39:48 -0400" Modified="2019-09-02 19:39:48 -0400" Type="Image">
+                            <Title>DeepInEVM_stack</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="58" UUID="FD11BCD8-1EC3-4EDD-96F4-8FC418206383" Created="2019-09-02 19:44:39 -0400" Modified="2019-09-02 19:44:40 -0400" Type="Image">
+                            <Title>DeepInEVM_memory</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="64" UUID="0868DA90-581B-4D29-BD95-1BF999DF4CAC" Created="2019-09-02 20:36:30 -0400" Modified="2019-09-02 20:36:30 -0400" Type="Image">
+                            <Title>ethereumAnyway_states</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="65" UUID="EA074BE7-D44A-4F02-B93E-FFBA5267A385" Created="2019-09-02 20:37:48 -0400" Modified="2019-09-02 20:37:48 -0400" Type="Image">
+                            <Title>ethereumAnyway_blockStates</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="66" UUID="0663A51E-AD3A-4AC0-9CB4-2AAAB6C54F79" Created="2019-09-02 20:44:00 -0400" Modified="2019-09-02 20:44:01 -0400" Type="Image">
+                            <Title>ethereumAnyway_fork</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="67" UUID="C53CDD52-A4D0-4133-8B59-7A4148771BD9" Created="2019-09-02 20:44:15 -0400" Modified="2019-09-02 20:44:16 -0400" Type="Image">
+                            <Title>ethereumAnyway_ghost</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="68" UUID="2BCCDDBC-5AB9-480A-8441-259570DDD315" Created="2019-09-03 08:16:44 -0400" Modified="2019-09-03 08:16:45 -0400" Type="Image">
+                            <Title>ethereumAnyway_stateTree</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="69" UUID="84B6640F-29B6-4FBD-B22E-83F4D14DD63C" Created="2019-09-03 08:20:06 -0400" Modified="2019-09-03 08:20:07 -0400" Type="Image">
+                            <Title>ethereumAnyway_blockTree</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="70" UUID="CD99FB04-1CFB-4D7A-A7CB-0A0064F83406" Created="2019-09-12 13:16:14 -0400" Modified="2019-09-12 13:16:15 -0400" Type="Image">
+                            <Title>ethereumAnyway_gas</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="71" UUID="7AE4233B-4D69-45AA-A062-30E0BE8DC3E2" Created="2019-09-12 13:19:07 -0400" Modified="2019-09-12 13:19:08 -0400" Type="Image">
+                            <Title>ethereumAnyway_gasOut</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="72" UUID="EF435CCE-A76B-47CA-88DD-5AFFEC161AEC" Created="2019-09-12 13:18:53 -0400" Modified="2019-09-12 13:18:54 -0400" Type="Image">
+                            <Title>ethereumAnyway_gasLeftOver</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="73" UUID="9606B382-9177-4C10-A700-81C23D047D88" Created="2019-09-12 13:27:55 -0400" Modified="2019-09-12 13:27:55 -0400" Type="Image">
+                            <Title>ethereumAnyway_transaction</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="75" UUID="694E8E4B-4DEF-4C4C-850E-D62BADD19231" Created="2019-09-12 14:58:30 -0400" Modified="2019-09-12 14:58:31 -0400" Type="Image">
+                            <Title>EthereBlockchainMechanism</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="78" UUID="05742BE9-EF30-41B6-A38F-5830A0A88594" Created="2019-09-12 15:30:01 -0400" Modified="2019-09-12 15:30:02 -0400" Type="Image">
+                            <Title>ethereumSmartContracts_userCreateContract</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="79" UUID="569CEE77-4454-4005-A6E2-C1658E974F16" Created="2019-09-12 15:30:01 -0400" Modified="2019-09-12 15:30:55 -0400" Type="Image">
+                            <Title>ethereumSmartContracts_userToContract</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="80" UUID="180550B9-D699-41F3-95E0-907A9770E9DC" Created="2019-09-12 15:29:38 -0400" Modified="2019-09-12 15:29:39 -0400" Type="Image">
+                            <Title>ethereumSmartContracts_userToUser</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="81" UUID="2E2DA754-FFFE-4046-8742-D9A5A9EB1055" Created="2019-09-12 15:29:18 -0400" Modified="2019-09-12 15:29:18 -0400" Type="Image">
+                            <Title>ethereumSmartContracts_transactionFields</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="85" UUID="49C649B9-8601-4ED2-89D5-03CC1F443376" Created="2019-09-13 15:02:14 -0400" Modified="2019-09-13 15:02:15 -0400" Type="Image">
+                            <Title>LifeCycleTransaction_vote</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="86" UUID="E70222D3-E499-41ED-A9BF-836FBC92EBD3" Created="2019-09-13 15:39:03 -0400" Modified="2019-09-13 15:39:04 -0400" Type="Image">
+                            <Title>LifeCycleTransaction_transactionPropogation</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="87" UUID="07866176-8ED9-475C-B8CF-5D412AAC19B9" Created="2019-09-13 16:06:58 -0400" Modified="2019-09-13 16:06:59 -0400" Type="Image">
+                            <Title>LifeCycleTransaction_minerPool</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="106" UUID="93C6DD6E-33BC-4522-B305-40739FEB91F2" Created="2019-09-18 10:57:55 -0400" Modified="2019-09-18 10:57:56 -0400" Type="Image">
+                            <Title>misc_pubVSprivate</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpeg</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="116" UUID="D7D1CC3A-628C-40A0-B263-74AF886DBC17" Created="2019-09-18 12:37:38 -0400" Modified="2019-09-18 12:37:38 -0400" Type="Image">
+                            <Title>misc_POW</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="117" UUID="2B50DAF8-9BB5-4F9D-86D2-14703BD97397" Created="2019-09-18 12:39:46 -0400" Modified="2019-09-18 12:39:47 -0400" Type="Image">
+                            <Title>misc_POWvsPOS</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="119" UUID="BBF62DBF-6DDA-4F6D-98D0-EA358C0CB1A5" Created="2019-09-18 12:41:11 -0400" Modified="2019-09-18 12:41:13 -0400" Type="Image">
+                            <Title>misc_POA</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>jpg</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="121" UUID="1362F1B0-FD85-4C0A-954E-5FEEA59B4515" Created="2019-09-18 12:53:19 -0400" Modified="2019-09-18 12:53:19 -0400" Type="Image">
+                            <Title>misc_ghost</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="122" UUID="161628CF-4BBE-4C12-8C42-5DF92E76787A" Created="2019-09-18 13:45:07 -0400" Modified="2019-09-18 13:45:07 -0400" Type="Image">
+                            <Title>misc_networkDwg</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="124" UUID="944AF2A5-BAC9-4589-A7A9-8FCE87A53356" Created="2019-09-18 13:57:36 -0400" Modified="2019-09-18 13:57:37 -0400" Type="Image">
+                            <Title>misc_accounts</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                        <BinderItem ID="125" UUID="4350C529-E7D7-4D1A-97F5-39D97B0B03F3" Created="2019-09-18 13:58:34 -0400" Modified="2019-09-18 13:58:35 -0400" Type="Image">
+                            <Title>misc_accountProperties</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <FileExtension>png</FileExtension>
+                                <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                            </MetaData>
+                            <MediaSettings>
+                                <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                            </MediaSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="2" UUID="C324C1B7-D143-4A52-A865-E7CA3102FA3D" Created="2015-04-19 01:22:32 -0400" Modified="2015-04-19 01:22:32 -0400" Type="TrashFolder">
+            <Title>Trash</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+        </BinderItem>
+    </Binder>
+    <LabelSettings>
+        <Title>Label</Title>
+        <DefaultLabelID>-1</DefaultLabelID>
+        <Labels>
+            <Label ID="-1">No Label</Label>
+            <Label ID="0" Color="0.900008 0.919997 0.949996">Concept</Label>
+            <Label ID="1" Color="0.985000 0.874998 0.850004">Chapter</Label>
+        </Labels>
+    </LabelSettings>
+    <StatusSettings>
+        <Title>Status</Title>
+        <DefaultStatusID>-1</DefaultStatusID>
+        <StatusItems>
+            <Status ID="-1">No Status</Status>
+            <Status ID="0">To Do</Status>
+            <Status ID="1">First Draft</Status>
+            <Status ID="2">Revised Draft</Status>
+            <Status ID="3">Final Draft</Status>
+            <Status ID="4">Done</Status>
+        </StatusItems>
+    </StatusSettings>
+    <ProjectTargets>
+        <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2015-03-17 17:21:30 -0500" IgnoreDeadline="Yes">0</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="No" WritingDays="">0</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2019-09-27 11:51:55 -0400"/>
+    </ProjectTargets>
+    <Collections>
+        <Collection Type="Binder" ID="342A9FC0-3462-40C5-A29A-1098AC7BD568" Color="0.901961 0.917647 0.933333">
+            <Title>Binder</Title>
+        </Collection>
+        <Collection Type="RecentSearch" ID="A4324A4E-67AC-4461-8EFC-B5DB95C21055" Color="0.901961 0.901961 0.980392">
+            <Title>Search Results</Title>
+            <SearchSettings Operator="Exact" Type="All" Scope="All" CompileSetting="All" CaseSensitive="No">miner</SearchSettings>
+        </Collection>
+    </Collections>
+    <PrintSettings PaperType="Letter" LeftMargin="72.0001" RightMargin="72.0001" TopMargin="90.0002" BottomMargin="90.0002" Orientation="Portrait" Collates="No" ReverseOrder="No"/>
+</ScrivenerProject>

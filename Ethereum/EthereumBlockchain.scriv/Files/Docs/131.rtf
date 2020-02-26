@@ -1,0 +1,399 @@
+{\rtf1\ansi\ansicpg1252\uc1\deff0
+{\fonttbl{\f0\fmodern\fcharset0\fprq2 CourierNewPSMT;}}
+{\colortbl;\red0\green0\blue0;\red255\green255\blue255;\red128\green128\blue128;}
+\paperw12240\paperh15840\margl1800\margr1800\margt1440\margb1440\fet2\ftnbj\aenddoc
+\pgnrestart\pgnstarts0
+\pard\plain \fi360\ltrch\loch {\f0\fs24\b0\i0 A set of Docker images to create a local Ethereum network with three nodes and a monitor. This was built to understand how local Ethereum networks have to be set up and to provide a local test environment. Never use this in a productive environment, as the docker-compose.yml contains hardcoded passwords and private keys for convenience}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 The testnet consists out of multiple parts :}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 1 Bootnode - registers existing nodes on the network, discovery service.}
+\par\plain {\f0\fs24\b0\i0 2 Miners - Also called sealers with proof-of-authority. They validate the blocks. No RPC is exposed as they are required to be unlocked.}
+\par\plain {\f0\fs24\b0\i0 1 Node - This serves as transaction relay and is a fullnode that does not mine, is locked but has RPC exposed}
+\par\plain {\f0\fs24\b0\i0 2 Swarm nodes - These nodes make up the peer-to-peer CDN}
+\par\plain {\f0\fs24\b0\i0 1 Blockchain explorer - Lightweight web application to explore the blockchain through web application.}
+\par\plain {\f0\fs24\b0\i0 Miners/Nodes have to be initialized with a 'Genesis Block' (the first block of the chain). This is defined in 'genesis.json'}
+\par\plain \f0\fs24\b0\i0
+\par\plain \f0\fs24\b0\i0
+
+
+\trowd\trgaph0 \trautofit1 \trbrdrt\brdrnil \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Genesis Section}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Description}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrt\brdrnil \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 config\{\}}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 configuration settings for the chain stack itself}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 config.chainId}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Required to differentiate different chains (ETH uses id=1, ETC uses id=6, others are listed here )}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 config.homesteadBlock}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Forces use of Homestead release}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 config.eip150block}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Forces use of EIP150 on block #0}
+\par\plain \intbl\itap1{\f0\fs24\b0\i0 https://github.com/ethereum/eips/issues/150}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 config.eip150hash}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Hash needed for fast sync}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 config.eip155block}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Forces use of EIP155 on block #0}
+\par\plain \intbl\itap1{\f0\fs24\b0\i0 https://github.com/ethereum/eips/issues/155}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 config.eip158block}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Forces use of EIP158 on block #0}
+\par\plain \intbl\itap1{\f0\fs24\b0\i0 https://github.com/ethereum/eips/issues/158}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 config.byzantiumBlock}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Forces use of byzantium on block #0}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 config.clique\{\}}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Forces use of Clique PoA (proof of Authority)}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 config.clique.period}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 How long to create new blocks (in sec)}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 config.clique.epoch}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Epoch in blocks (default/recommended is 30000)}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1\f0\fs24\b0\i0\cell 
+\pard\plain \intbl\itap1\f0\fs24\b0\i0\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 nonce}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Used (with mixHash) to verify mined block (best to leave at 0)}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 timestamp}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Unix time() output used for first block (value is trivial)}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 extraData}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Required for PoA - must embed initial signer address}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 gasLimit}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Max amount of gas used per block (not transaction) (most examples have this set to 0x8000000)}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 difficulty}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 How difficult it is to, statistically, to 'mine' a block (0-10000 is common for private networks, public network is >7million)}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 mixHash}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Used (with nonce) to verify mined block for PoW (may not be used with PoA) (many examples have this at 0)}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 number}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 First block number (standard/default is 0)}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 gasUsed}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Gas required to mine the genesis block}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 parentHash}\cell 
+\pard\plain \intbl\itap1{\f0\fs24\b0\i0 Hash of the Genesis block (value shouldn't matter - many examples have at 0)}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1\f0\fs24\cell 
+\pard\plain \intbl\itap1\f0\fs24\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24 alloc\{\}}\cell 
+\pard\plain \intbl\itap1{\f0\fs24 Pre-allocate some accounts with Ethereum coins}\cell{
+\trowd\trgaph0 \trautofit1 \trbrdrr\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+
+\trowd\trgaph0 \trautofit1\lastrow \trbrdrr\brdrnil \trbrdrb\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+
+\pard\plain \intbl\itap1{\f0\fs24 alloc.a59\loch\af0\hich\af0\dbch\af0\uc1\u8230\'85}\cell 
+\pard\plain \intbl\itap1{\f0\fs24 Give account a59\loch\af0\hich\af0\dbch\af0\uc1\u8230\'85 'balance' # of coins}\cell{
+\trowd\trgaph0 \trautofit1\lastrow \trbrdrr\brdrnil \trbrdrb\brdrnil \trbrdrl\brdrnil 
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx4320
+
+\clvertalt \clshdrawnil\clbrdrt\brdrs\brdrw20\brdrcf3 \clbrdrr\brdrs\brdrw20\brdrcf3 \clbrdrb\brdrs\brdrw20\brdrcf3 \clbrdrl\brdrs\brdrw20\brdrcf3 \cellx8640
+\row}\pard
+\pard\plain \fi360\ltrch\loch {\f0\fs24\b0\i0  }
+\par\plain {\f0\fs24\b0\i0 More can be found about the following:}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 Byzantium - https://medium.com/digitalassetresearch/understanding-byzantium-what-it-represents-to-the-ethereum-network-9de3d00d552a}
+\par\plain {\f0\fs24\b0\i0 Chain Id - https://ethereum.stackexchange.com/questions/17051/how-to-select-a-network-id-or-is-there-a-list-of-network-ids}
+\par\plain {\f0\fs24\b0\i0 Clique PoA - https://medium.com/coinmonks/ethereum-clique-poa-vs-pow-11be52cddde1}
+\par\plain {\f0\fs24\b0\i0 https://github.com/ethereum/EIPs/issues/225}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 The bootnode}
+\par\plain {\f0\fs24\b0\i0 [~/test-kitchen/ethereum_poc/geth-dev/bootnode]}
+\par\plain {\f0\fs24\b0\i0 The nodes in the network are connecting with the bootnode. This is a special ethereum node, designed to provide a register of the existing nodes in the network. The parameter nodekeyhexin the docker-compose.yml is needed to derive the enodeID which is later passed to the other nodes. The IP needs to be fixed, as the other nodes need to know where to find the bootnode, and DNS is not supported. The bootnode does not participate in synchronization of state or mining.}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 Miners}
+\par\plain {\f0\fs24\b0\i0 [~/test-kitchen/ethereum_poc/geth-dev/miner]}
+\par\plain {\f0\fs24\b0\i0 There are three nodes that participate in the network. The state is synchronized between them and they are trying to create blocks with mining. Initially they connect to the bootnode with the information derived from the fixed IP and the nodekeyhex. If you want to interact with the network, you need to connect via RPC. You can attach a geth instance, connect Remix IDE or connect your browser with web3 and build a \loch\af0\hich\af0\dbch\af0\uc1\u208\'D0App.}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 The RPC Ports of the nodes are mapped to your localhost, the addresses are:}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 geth-dev-miner-1 : (only exposed for network stat site)http://localhost:8547}
+\par\plain {\f0\fs24\b0\i0 geth-dev-miner-2: (only exposed for network stat site)http://localhost:8546 }
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 Node}
+\par\plain {\f0\fs24\b0\i0 [~/test-kitchen/ethereum_poc/geth-dev/miner]}
+\par\plain {\f0\fs24\b0\i0 There are three nodes that participate in the network. The state is synchronized between them and they are trying to create blocks with mining. Initially they connect to the bootnode with the information derived from the fixed IP and the nodekeyhex. If you want to interact with the network, you need to connect via RPC. You can attach a geth instance, connect Remix IDE or connect your browser with web3 and build a \loch\af0\hich\af0\dbch\af0\uc1\u208\'D0App.}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 The RPC Ports of the nodes are mapped to your localhost, the addresses are: }
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 geth-dev-node: (used for geth attach)http://localhost:8545}
+\par\plain \f0\fs24\b0\i0
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 Swarm (/BZZ:/)}
+\par\plain {\f0\fs24\b0\i0 [~/test-kitchen/ethereum_poc/geth-dev/swarm]}
+\par\plain {\f0\fs24\b0\i0 Swarm is a distributed storage platform and content distribution service, a native base layer service of the ethereum web3 stack. The primary objective of Swarm is to provide a sufficiently decentralized and redundant store of Ethereum\loch\af0\hich\af0\dbch\af0\uc1\u8217\'92s public record, in particular to store and distribute dapp code and data as well as blockchain data. From an economic point of view, it allows participants to efficiently pool their storage and bandwidth resources in order to provide these services to all participants of the network, all while being incentivised by Ethereum. Files on Swarm are represented by their KECCAK256 Checksum.}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 The RPC Ports of the nodes are mapped to your localhost, the addresses are:}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 http://localhost:8500 - geth-swarm-1}
+\par\plain {\f0\fs24\b0\i0 http://localhost:8501 - geth-swarm-2}
+\par\plain \f0\fs24\b0\i0
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 Blockchain Explorer}
+\par\plain {\f0\fs24\b0\i0 [~/test-kitchen/ethereum_poc/geth-dev/explorer]}
+\par\plain {\f0\fs24\b0\i0 The blockchain explorer is a simple node.js web application being provided by a seperate container: geth-explorer. The application uses the web3 javascript API to fetch the data from geth-dev-node through RPC calls. The blockchain explorer can be found at http://localhost:8080.}
+\par\plain \f0\fs24\b0\i0
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 Network Monitor}
+\par\plain {\f0\fs24\b0\i0 [~/test-kitchen/ethereum_poc/geth-dev/monitor-backend]}
+\par\plain {\f0\fs24\b0\i0 [~/test-kitchen/ethereum_poc/geth-dev/monitor-frontend]}
+\par\plain {\f0\fs24\b0\i0 This is a visual interface for tracking ethereum network status. It uses WebSockets to receive stats from running nodes and output them through an angular interface. It is the front-end implementation for eth-net-intelligence-api.}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 https://medium.com/coinmonks/how-to-build-ethereum-dashboard-and-to-monitor-your-ethereum-network-status-9f1941beac08}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 google-chrome http://localhost:3000/}}

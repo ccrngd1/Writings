@@ -1,0 +1,40 @@
+{\rtf1\ansi\ansicpg1252\uc1\deff0
+{\fonttbl{\f0\fmodern\fcharset0\fprq2 CourierNewPSMT;}}
+{\colortbl;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\listtable
+{\list\listtemplateid1\listhybrid
+{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\'01\loch\af0\hich\af0\dbch\af0\uc1\u9679\'3F;}{\levelnumbers;}\f0\fs24\b0\i0\fi-360\li720\lin720}{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw12240\paperh15840\margl1800\margr1800\margt1440\margb1440\fet2\ftnbj\aenddoc
+\pgnrestart\pgnstarts0
+\pard\plain \fi360\ltrch\loch {\f0\fs24\b0\i0 Before any work can begin, there are several tools that need to be installed and the git repository needs to be cloned locally. }
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 First, we need to get our system updated and install the git command line}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 \{\\Scrv_ps=sudo apt-get update\\end_Scrv_ps\}}
+\par\plain {\f0\fs24\b0\i0 \{\\Scrv_ps=sudo apt-get upgrade\\end_Scrv_ps\}}
+\par\plain {\f0\fs24\b0\i0 \{\\Scrv_ps=sudo apt-get install git-core\\end_Scrv_ps\}}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 Next, let\loch\af0\hich\af0\dbch\af0\uc1\u8217\'92s get all the necessary files from github.}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 @GITREPO}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 Download the code from the above into a convenient location}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 \{\\Scrv_ps=cd ~\\end_Scrv_ps\}}
+\par\plain {\f0\fs24\b0\i0 \{\\Scrv_ps=git clone @GITREPO\\end_Scrv_ps\}}
+\par\plain {\f0\fs24\b0\i0 \{\\Scrv_ps=cd test-kitchen/ethereum_POC/\\end_Scrv_ps\}}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 Now, we can begin to install the remaining tools that are needed to run the containers and virtual machines.  To make it easier, all of the tools and setup that needs to be done are all contained in a single script file that can be run.}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 \{\\Scrv_ps=sudo ./Linuxsetup.sh\\end_Scrv_ps\}}
+\par\plain \f0\fs24\b0\i0
+\par\plain {\f0\fs24\b0\i0 This command should install the following tools:}
+\par\pard\plain \tx240\tx720\li720\fi-720\ltrch\loch \ls1\ilvl0{\listtext\f0\fs24\b0\i0	\loch\af0\hich\af0\dbch\af0\uc1\u9679\'3F	}{\f0\fs24\b0\i0 virtualbox }
+\par\pard\plain \tx240\tx720\li720\fi-720\ltrch\loch \ls1\ilvl0{\listtext\f0\fs24\b0\i0	\loch\af0\hich\af0\dbch\af0\uc1\u9679\'3F	}{\f0\fs24\b0\i0 docker.io }
+\par\pard\plain \tx240\tx720\li720\fi-720\ltrch\loch \ls1\ilvl0{\listtext\f0\fs24\b0\i0	\loch\af0\hich\af0\dbch\af0\uc1\u9679\'3F	}{\f0\fs24\b0\i0 docker-compose }
+\par\pard\plain \tx240\tx720\li720\fi-720\ltrch\loch \ls1\ilvl0{\listtext\f0\fs24\b0\i0	\loch\af0\hich\af0\dbch\af0\uc1\u9679\'3F	}{\f0\fs24\b0\i0 unzip }
+\par\pard\plain \tx240\tx720\li720\fi-720\ltrch\loch \ls1\ilvl0{\listtext\f0\fs24\b0\i0	\loch\af0\hich\af0\dbch\af0\uc1\u9679\'3F	}{\f0\fs24\b0\i0 curl }
+\par\pard\plain \tx240\tx720\li720\fi-720\ltrch\loch \ls1\ilvl0{\listtext\f0\fs24\b0\i0	\loch\af0\hich\af0\dbch\af0\uc1\u9679\'3F	}{\f0\fs24\b0\i0 vagrant}
+\par\pard\plain \fi360\ltrch\loch \f0\fs24\b0\i0
+\par\plain \f0\fs24\b0\i0}

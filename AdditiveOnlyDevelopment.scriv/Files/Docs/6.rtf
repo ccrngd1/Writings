@@ -1,0 +1,56 @@
+{\rtf1\ansi\ansicpg1252\uc1\deff0
+{\fonttbl{\f0\fmodern\fcharset0\fprq2 CourierNewPSMT;}{\f1\fmodern\fcharset0\fprq2 Georgia-Bold;}{\f2\fmodern\fcharset0\fprq2 Verdana;}{\f3\fmodern\fcharset0\fprq2 Verdana-Italic;}{\f4\fmodern\fcharset0\fprq2 inherit;}{\f5\fmodern\fcharset0\fprq2 inherit;}{\f6\fmodern\fcharset0\fprq2 Calibri;}{\f7\fmodern\fcharset0\fprq2 Calibri-Italic;}{\f8\fmodern\fcharset0\fprq2 IBM Plex Sans;}{\f9\fmodern\fcharset0\fprq2 IBM Plex Sans;}{\f10\fmodern\fcharset0\fprq2 inherit;}}
+{\colortbl;\red0\green0\blue0;\red255\green255\blue255;\red17\green17\blue17;\red0\green0\blue255;\red89\green89\blue89;\red102\green102\blue102;\red238\green238\blue238;}
+\paperw12240\paperh15840\margl1800\margr1800\margt1440\margb1440\fet2\ftnbj\aenddoc
+\pgnrestart\pgnstarts0
+\pard\plain \ltrch\loch {\f1\fs36\b1\cf3\cb2\highlight2 Inheritance}{\f0\fs24  }
+\par\plain {\f2\fs20\cf3\cb2\highlight2 Quoting from Wikipedia:}{\f0\fs24  }
+\par\plain {\f2\fs20\cf3\cb2\highlight2 \loch\af2\hich\af2\dbch\af2\uc1\u8220\'93If\~}{\f3\fs20\i1\cf3\cb2\highlight2 S}{\f2\fs20\cf3\cb2\highlight2 \~is a subtype of\~}{\f3\fs20\i1\cf3\cb2\highlight2 T}{\f2\fs20\cf3\cb2\highlight2 , then objects of type\~}{\f3\fs20\i1\cf3\cb2\highlight2 T}{\f2\fs20\cf3\cb2\highlight2 \~in a program may be replaced with objects of type\~}{\f3\fs20\i1\cf3\cb2\highlight2 S}{\f2\fs20\cf3\cb2\highlight2 \~without altering any of the desirable properties of that program\loch\af2\hich\af2\dbch\af2\uc1\u8221\'94}{\f0\fs24  }
+\par\plain {\f2\fs20\cf3\cb2\highlight2 This relies on subtyping as an\~}{\f4\fs20\b1\cf3\cb2\highlight2 additive}{\f2\fs20\cf3\cb2\highlight2 \~change: S works at least as good as any T, so it is an extension, an addition. You should therefore design your systems in a way that the Liskov Substition Principle, and therefore the rule of additive changes, both hold: An addition of a new type in a hierarchy cannot break anything.}{\f0\fs24  }
+\par\plain {\f1\fs36\b1\cf3\cb2\highlight2 Whitelists vs. Blacklists}{\f0\fs24  }
+\par\plain {\f2\fs20\cf3\cb2\highlight2 Blacklists will often violate the rule of additive changes. Once you add a new element to the domain, the domain behind the blacklist will change as well, while the domain behind a whitelist will be unaffected. Ultimately, both can be what you want, but usually, the more contained change will break less \endash  and you can still change the whitelist explicitly later!}{\f0\fs24  }
+\par\plain {\f2\fs20\cf3\cb2\highlight2 Note that systems that filter classes from a hierarchy via\~}{\field{\*\fldinst HYPERLINK "https://en.wikipedia.org/wiki/Run-time_type_information"}{\fldrslt\f5\fs20\ul\ulc0\cf4\cb2\highlight2 RTTI}}{\f2\fs20\cf3\cb2\highlight2 \~or, even more subtle, via\~}{\field{\*\fldinst HYPERLINK "http://martinfowler.com/bliki/TellDontAsk.html"}{\fldrslt\f5\fs20\ul\ulc0\cf4\cb2\highlight2 ask-interfaces}}{\f2\fs20\cf3\cb2\highlight2 , are blacklists. Those systems can break easily when new types are introduces to a hierarchy. Extra care needs to be taken to make sure the rule of addition holds for these systems.}{\f0\fs24  }
+\par\plain {\f1\fs36\b1\cf3\cb2\highlight2 Introspection and Reflection}{\f0\fs24  }
+\par\plain {\f2\fs20\cf3\cb2\highlight2 Without introspection and reflection, programs cannot know when you are adding a new type or a new function. However, with introspection, they can. Any additive change can also be an incision point. Therefore, you need to be extra careful when designing systems that use introspection: They should not break existing functionality for adding something.}{\f0\fs24  }
+\par\plain {\f2\fs20\cf3\cb2\highlight2 For example, adding a function to enable a specific new functionality is okay. A common case of this would be to adding a function to a controller in a web-framework to add a new action. This will not inferfere with existing functionality, so it is fine.}{\f0\fs24  }
+\par\plain {\f2\fs20\cf3\cb2\highlight2 On the other hand, adding a member to a controller should not disable or change functionality. Adding a special member for \loch\af2\hich\af2\dbch\af2\uc1\u8220\'93filtering\u8221\'94 or some kind of security setting falls into this category. You think you\u8217\'92re merely adding something, but in fact you are modifying. A system that relies on such behavior therefore violates the rule of additive changes. Decorating the member is a much better alternative, as that makes it clear that you are indeed modifying something, which might break existing functionality.}{\f0\fs24  }
+\par\plain {\f2\fs20\cf3\cb2\highlight2 Not all languages or frameworks provide this possibility though. In that case, the only alternative is good communication and documentation!}{\f0\fs24  }
+\par\plain {\f1\fs36\b1\cf3\cb2\highlight2 Refactoring}{\f0\fs24  }
+\par\plain {\f2\fs20\cf3\cb2\highlight2 Many engineers implicitly assume that the rule of additive changes holds. In his book \loch\af2\hich\af2\dbch\af2\uc1\u8220\'93Working Effectively With Legacy Code\u8221\'94, Micheal Feathers proposes the sprout and wrap techniques to change legacy software. The underlying technique is the same for both: formulating a potentially breaking change as mostly additive, with only a small incision point. In the presence of systems that do not follow the rule of additive changes, such risk minimization does not work at all. For example, adding additional function can break a system that relies heavily on introspection \endash  which goes against all intuition.}{\f0\fs24  }
+\par\plain {\f6\fs22 \~}{\f0\fs24  }
+\par\pard\plain \sa240\sb240\ltrch\loch {\f7\fs18\i1\cf5 From <}{\field{\*\fldinst HYPERLINK "https://schneide.blog/2016/06/13/the-rule-of-additive-changes/"}{\fldrslt\f7\fs18\i1\ul\ulc0\cf4 https://schneide.blog/2016/06/13/the-rule-of-additive-changes/}}{\f7\fs18\i1\cf5 > }
+\par\plain \f7\fs18\i1\cf5
+\par\pard\plain \ltrch\loch {\f8\fs36\b1\cf6 Additive / non destructive changes in\~JSON}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 A change to a structure can be considered additive, when we add more information, without removing the information. Say we have an object which represents a person:}{\f0\fs24  }
+\par\plain {\f6\fs22\cf3\cb7\highlight7 \{"name": "Maxim", "email": "maxim@#####.com"\}}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 And we add a phone number to it:}{\f0\fs24  }
+\par\plain {\f6\fs22\cf3\cb7\highlight7 \{"name":"Maxim", "email":"maxim@#####.com", "phone":"+49#####"\}}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 This is an additive change and can be considered non breaking, except you define phone number as required property in your own application model.}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 JSON as is, does not have a concept of a required property. A JSON object is a list of key/value pairs, even the order of the list is not important. However, when we define a model class in our application, we might insist on this property being required. We do it, because we want to have a \loch\af9\hich\af9\dbch\af9\uc1\u8220\'93clean\u8221\'94 application logic. However this implies that additive changes become breaking changes as well. Meaning that if a new client gets data from old client it will break, because old clients do not know the phone number property. BTW: new client being able to communicate with old clients is called\~}{\f4\fs30\b1\cf3 backwards compatibility}{\f9\fs30\cf3 .}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 Another case of additive breaking change is, if we have something like an enum construct in our data:}{\f0\fs24  }
+\par\plain {\f6\fs22\cf3\cb7\highlight7 enum Gender \{ case male, female \}}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 And we translate the case names into strings:}{\f0\fs24  }
+\par\plain {\f6\fs22\cf3\cb7\highlight7 \{"name": "Maxim", "email": "maxim@#####.com", "gender":"male"\}}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 If we decide to add more cases to gender enum, it is an additive non destructive change, but it might break old clients. Say we change the gender enum like following:}{\f0\fs24  }
+\par\plain {\f6\fs22\cf3\cb7\highlight7 enum Gender \{ case male, female, other \}}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 If following object will be received by an old client:}{\f0\fs24  }
+\par\plain {\f6\fs22\cf3\cb7\highlight7 \{"name": "Maxim", "email": "maxim@#####.com", "gender":"other"\}}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 Old client will try to convert the gender property to it\loch\af9\hich\af9\dbch\af9\uc1\u8217\'92s own model representation of gender and in best case scenario, it will produce a\~nil\~and lose/ignore the information about gender. Worst case scenario it will crash trying to transform an unknown key. BTW. old clients able to talk to new clients is called\~}{\f4\fs30\b1\cf3 forwards compatibility}{\f9\fs30\cf3 .}{\f0\fs24  }
+\par\plain {\f6\fs22 \~}{\f0\fs24  }
+\par\plain {\f8\fs36\b1\cf6 Destructive change \hich\f8 \emdash \loch\f8  remove\~property}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 Imagine we got a new requirement to remove the\~email\~property.}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 In case of JSON, it is not a big deal, except if we defined\~email\~as required. As mentioned before\~required\~is a bad idea when it comes to data evolution. Otherwise if a new client will receive a JSON which contains an\~email\~property, it will just ignore it. }
+\par\plain {\f6\fs30\cf3 \~}{\f0\fs24  }
+\par\plain {\f8\fs36\b1\cf6 Renaming property\~names}{\f0\fs24  }
+\par\plain {\f10\fs30\i1\cf3 There are only two hard things in Computer Science: cache invalidation and naming things.}{\f0\fs24  }
+\par\plain {\f10\fs30\i1\cf3 \hich\f10 \emdash \loch\f10  Phil Karlton}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 Let\loch\af9\hich\af9\dbch\af9\uc1\u8217\'92s say we realised that\~name\~is not an accurate description of the property and we should change it to\~fullName\~or maybe\~full_name. This is a breaking change in JSON. An old client will ask the person object for \u8220\'93name\u8221\'94. So if a new client starts sending \u8220\'93full_name\u8221\'94 instead, both will not be able to communicate any more.}{\f0\fs24  }
+\par\plain {\f6\fs30\cf3 \~}{\f0\fs24  }
+\par\plain {\f8\fs36\b1\cf6 Changing property\~type}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 Some times we realise that the type we chose for the property is not sufficient. Let\loch\af9\hich\af9\dbch\af9\uc1\u8217\'92s say we want to keep the property\~name, but it should now store an object which contains first and last names:}{\f0\fs24  }
+\par\plain {\f6\fs22\cf3\cb7\highlight7 \{"name": \{"firstName" : "Maxim", "lastName": "Zaks"\}\}}{\f0\fs24  }
+\par\plain {\f9\fs30\cf3 This would be a breaking change in JSON, FlatBuffers and Protocol Buffers.}{\f0\fs24  }
+\par\plain {\f6\fs22 \~}{\f0\fs24  }
+\par\pard\plain \sa240\sb240\ltrch\loch {\f7\fs18\i1\cf5 From <}{\field{\*\fldinst HYPERLINK "https://hackernoon.com/breaking-changes-26a2633f3415"}{\fldrslt\f7\fs18\i1\ul\ulc0\cf4 https://hackernoon.com/breaking-changes-26a2633f3415}}{\f7\fs18\i1\cf5 > }
+\par\pard\plain \ltrch\loch {\f6\fs22 \~}{\f0\fs24  }
+\par\plain {\f6\fs22 \~}{\f0\fs24  }}

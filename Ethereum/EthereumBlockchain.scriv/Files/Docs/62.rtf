@@ -1,0 +1,59 @@
+{\rtf1\ansi\ansicpg1252\uc1\deff0
+{\fonttbl{\f0\fmodern\fcharset0\fprq2 CourierNewPSMT;}}
+{\colortbl;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}
+\paperw12240\paperh15840\margl1800\margr1800\margt1440\margb1440\fet2\ftnbj\aenddoc
+\pgnrestart\pgnstarts0
+\pard\plain \li720\fi-360\ltrch\loch {\field{\*\fldinst HYPERLINK "https://medium.com/coinmonks/ethereum-account-212feb9c4154"}{\fldrslt\f0\fs24\b0\i0\ul\ulc0\cf3 https://medium.com/coinmonks/ethereum-account-212feb9c4154}}
+\par\pard\plain \ltrch\loch \f0\fs24
+\par\plain {\f0\fs24 Account state}
+\par\plain {\f0\fs24 The account state consists of four components, which are present regardless of the type of account:}
+\par\plain \f0\fs24
+\par\plain {\f0\fs24 nonce: If the account is an externally owned account, this number represents the number of transactions sent from the account\loch\af0\hich\af0\dbch\af0\uc1\u8217\'92s address. If the account is a contract account, the nonce is the number of contracts created by the account.}
+\par\plain \f0\fs24
+\par\plain {\f0\fs24 balance: The number of Wei owned by this address. There are 1e+18 Wei per Ether.}
+\par\plain \f0\fs24
+\par\plain {\f0\fs24 storageRoot: A 256-bit hash of the root node of a Merkle Patricia tree that encodes the storage contents of the account (a mapping between 256-bit integer values), encoded into the trie as a mapping from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-bit integer values. This tree encodes the hash of the storage contents of this account, and is empty by default.}
+\par\plain \f0\fs24
+\par\plain {\f0\fs24 codeHash: The hash of the EVM (Ethereum Virtual Machine) code of this account \hich\f0 \emdash \loch\f0  this is the code that gets executed should this address receive a message call; it is immutable and thus, unlike all other fields, cannot be changed after construction. All such code fragments are contained in the state database under their corresponding hashes for later retrieval. For contract accounts, this is the code that gets hashed and stored as the codeHash. For externally owned accounts, the codeHash field is the hash of the empty string.}
+\par\plain \f0\fs24
+\par\plain \f0\fs24
+\par\plain {\f0\fs24 Externally owned accounts (EOAs)}
+\par\plain \f0\fs24
+\par\plain {\f0\fs24 An externally controlled account}
+\par\plain {\f0\fs24 has an ether balance,}
+\par\plain {\f0\fs24 can send transactions (ether transfer or trigger contract code),}
+\par\plain {\f0\fs24 is controlled by private keys,}
+\par\plain {\f0\fs24 has no associated code.}
+\par\plain \f0\fs24
+\par\plain {\f0\fs24 Contract accounts (some articles call Contract Wallet)}
+\par\plain {\f0\fs24 A contract}
+\par\plain {\f0\fs24 has an ether balance,}
+\par\plain {\f0\fs24 has associated code,}
+\par\plain {\f0\fs24 code execution is triggered by transactions or messages (calls) received from other contracts.}
+\par\plain {\f0\fs24 when executed \hich\f0 \emdash \loch\f0  perform operations of arbitrary complexity (Turing completeness) \hich\f0 \emdash \loch\f0  manipulate its own persistent storage, i.e., can have its own permanent state \hich\f0 \emdash \loch\f0  can call other contracts}
+\par\plain {\f0\fs24 Contract accounts in Exchange Send Ether (ETH) to a user account has a fee of 21000 gas but sending ETH to a contract has a higher fee, which depends on the contract code and data being sent in the transaction.}
+\par\plain \f0\fs24
+\par\plain {\f0\fs24 Advantages of contract accounts over User Account:}
+\par\plain {\f0\fs24 Contract account can list incoming transactions}
+\par\plain {\f0\fs24 Contract account can be setup as Multisig Accounts}
+\par\plain {\f0\fs24 A Multisig Account can be structured such that it has a daily limit which you specify, and only if the daily limit is exceeded will multiple signatures be required}
+\par\plain \f0\fs24
+\par\plain {\f0\fs24 Disadvantages of contract accounts over User Accounts:}
+\par\plain {\f0\fs24 Contract accounts incur a cost whenever you use them.}
+\par\plain \f0\fs24
+\par\plain \f0\fs24
+\par\plain {\f0\fs24 External accounts can send meessages to other Ext or Contract acct.}
+\par\plain \f0\fs24
+\par\plain {\f0\fs24 External to External is a value send (ETH)}
+\par\plain {\f0\fs24 External to contract kicks off smart contract}
+\par\plain {\f0\fs24 Contract can not initiate transactions but can call other contracts on behalf of Ext caller}
+\par\plain \f0\fs24
+\par\plain {\f0\fs24 Types of contract account}
+\par\plain {\f0\fs24 There are two type of contract account \hich\f0 \emdash \loch\f0  Simple account & Multisig( Multisignature) account}
+\par\plain {\f0\fs24 Simple account & Multisig account are created and owned by Accounts.}
+\par\plain {\f0\fs24 Simplet account : Only one account bother creates and owns the account.}
+\par\plain {\f0\fs24 Multisig account : A Multisig Wallet has several owner Accounts one of which will also be the creator Account.}
+\par\plain \f0\fs24
+\par\plain \f0\fs24
+\par\plain \f0\fs24
+\par\plain \f0\fs24}
