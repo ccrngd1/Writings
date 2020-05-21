@@ -5,9 +5,11 @@
             <Title>Introduction</Title>
             <Text>In the current landscape of micro services, with development teams focused primarily on new features or bug fixes, there is an emerging trend that developers and product managers need to content with &quot;breaking changes&quot; that can be introduced into a system.  In past years, breaking changes were often confined to a single team, or in some cases two teams, and communication of the changes were relatively simple; developers knew what pieces of their monoliths were being used other pieces inside the same solution.  As the era of monoliths comes to a close and the era of micro services and REST API endpoints takes more and more mind share, this control process of &quot;breaking changes&quot; becomes much more difficult to define, address, and prevent.
 
-The aim of this article is to present one such solution.  It will delve into the strict definition and its strict implementation, as well as a more practical recommendation to its adoption.  Like so many other process and technical solutions, there is a die hard path, an avoidance path, and a path of least resistance.  This article will strive to provide a path of least resistance for implementing this potential process solution into an existing development lifecycle.
+The aim of this article is to present one such solution.  It will delve into the strict definition and its strict implementation, as well as a more practical recommendation to its adoption.  Like so many other process and technical solutions, there is a die hard path, an avoidance path, and a path of least resistance.  This article will strive to provide a path of least resistance for implementing this potential process solution into an existing development life cycle.
 
 We will examine what situations cause a breaking change, try to come to a standard definition of what is a breaking change, and explore how to leverage this new methodology across each of the situations we define.  It will help, to keep in mind that the main tenants of this new methodology aren’t new and are really just a collection of strategies and purposeful development aimed at preventing breaking changes in largely distributed code bases.
+
+
 </Text>
         </Document>
         <Document ID="4">
@@ -15,90 +17,71 @@ We will examine what situations cause a breaking change, try to come to a standa
         </Document>
         <Document ID="5">
             <Title>breaking changes</Title>
-            <Text>Changing a method or resource name. 
+            <Text>INVOCATION
+
+Changing a method or resource name. 
 Renaming a method or changing the location of a RESTful resource is a pretty obvious breaking change. Doing so will require the consumer to update their code in order to invoke the new method name or resource location. 
 NOTE: This includes the concept of removing or deleting such a dependency as well. Of course, any time we delete something that a consumer depends on, it's a breaking change.
  
 Changing an invocation signature. 
 If you add optional parameters to an invocation target, that can be safe. But, if you add required parameters; or, if you add optional parameters that change the default behavior of the invocation; that is a breaking change. Doing so will require the consumer to update their invocation arguments in order to adapt to the change. 
-
-Changing a response structure. 
-When we talk about data structures, we often talk in terms of &quot;additive&quot; changes vs. &quot;breaking&quot; changes. The idea being that if you only add new properties to an existing structure, the consumer can safely ignore them at first; then, incrementally update the code to consume the new properties as needed. 
-But, is this always true? What if the consumer needs to serialize the data and store it in a database column that has a constrained character size? In such a case, even an &quot;additive&quot; change could cause an unexpected database truncation error. 
-Or, imagine that the response was being logged to a file. An increase in the response payload size could change the velocity with which log files take up disk-space. This, in turn, could cause issues if the log files aren't being rotated quickly enough. 
-
-Changing a response code. 
-Changing a response code is like changing a response data structure. If the consumer's logic examines the response code, the consumer may have to change their logic in order to cope with the change in response code. 
-But, what if you do something less obvious like implement ETag support. In such a case, an API that always responded with a 200 OK could suddenly start responding with a 304 Not Modified response. Such a change could cause runtime errors for a consumer that never had to deal with a functioning ETag workflow before. 
-
-Changing error types, messages, and other details. 
-When it comes to error handling, consumers implement all kinds of crazy-ass logic in order to understand the errors that are coming back from a system or module. This could mean looking at error Types and Messages. It could also mean performing string-parsing on the extended data provided in an error. As such, any change to the content of an error object could, theoretically, break the error handling logic in the consuming context. 
-
-Changing event types. 
-An event type is akin to a method signature or a RESTful resource location. As such, if you change an event type, consumers will have to change their code in order to listen for the new events. 
-
-Changing event payloads. 
-An event payload is akin to a response structure. As such, changing an event payload incurs the same problems as changing a response structure. In so much as an &quot;additive&quot; change will likely be OK in the vast majority of cases. But, that even an &quot;additive&quot; change can cause unexpected errors depending on how the consumer is processing the event. 
-
-Changing testable class hierarchies. 
-Changing the inheritance chain or prototype chain of an object is the same as changing its Type. As sucChanging a method or resource name. 
-Renaming a method or changing the location of a RESTful resource is a pretty obvious breaking change. Doing so will require the consumer to update their code in order to invoke the new method name or resource location. 
-NOTE: This includes the concept of removing or deleting such a dependency as well. Of course, any time we delete something that a consumer depends on, it's a breaking change.
- 
-Changing an invocation signature. 
-If you add optional parameters to an invocation target, that can be safe. But, if you add required parameters; or, if you add optional parameters that change the default behavior of the invocation; that is a breaking change. Doing so will require the consumer to update their invocation arguments in order to adapt to the change. 
-
-Changing a response structure. 
-When we talk about data structures, we often talk in terms of &quot;additive&quot; changes vs. &quot;breaking&quot; changes. The idea being that if you only add new properties to an existing structure, the consumer can safely ignore them at first; then, incrementally update the code to consume the new properties as needed. 
-But, is this always true? What if the consumer needs to serialize the data and store it in a database column that has a constrained character size? In such a case, even an &quot;additive&quot; change could cause an unexpected database truncation error. 
-Or, imagine that the response was being logged to a file. An increase in the response payload size could change the velocity with which log files take up disk-space. This, in turn, could cause issues if the log files aren't being rotated quickly enough. 
-
-Changing a response code. 
-Changing a response code is like changing a response data structure. If the consumer's logic examines the response code, the consumer may have to change their logic in order to cope with the change in response code. 
-But, what if you do something less obvious like implement ETag support. In such a case, an API that always responded with a 200 OK could suddenly start responding with a 304 Not Modified response. Such a change could cause runtime errors for a consumer that never had to deal with a functioning ETag workflow before. 
-
-Changing error types, messages, and other details. 
-When it comes to error handling, consumers implement all kinds of crazy-ass logic in order to understand the errors that are coming back from a system or module. This could mean looking at error Types and Messages. It could also mean performing string-parsing on the extended data provided in an error. As such, any change to the content of an error object could, theoretically, break the error handling logic in the consuming context. 
-
-Changing event types. 
-An event type is akin to a method signature or a RESTful resource location. As such, if you change an event type, consumers will have to change their code in order to listen for the new events. 
-
-Changing event payloads. 
-An event payload is akin to a response structure. As such, changing an event payload incurs the same problems as changing a response structure. In so much as an &quot;additive&quot; change will likely be OK in the vast majority of cases. But, that even an &quot;additive&quot; change can cause unexpected errors depending on how the consumer is processing the event. 
 
 Changing testable class hierarchies. 
 Changing the inheritance chain or prototype chain of an object is the same as changing its Type. As such, any consumer that inspects the type of an object, either declaratively as a Type annotation or imperatively with something like instanceof, will need to change their code in order to consume the new class definition. 
 
+
+DATA
+
+Changing a response structure. 
+When we talk about data structures, we often talk in terms of &quot;additive&quot; changes vs. &quot;breaking&quot; changes. The idea being that if you only add new properties to an existing structure, the consumer can safely ignore them at first; then, incrementally update the code to consume the new properties as needed. 
+But, is this always true? What if the consumer needs to serialize the data and store it in a database column that has a constrained character size? In such a case, even an &quot;additive&quot; change could cause an unexpected database truncation error. 
+Or, imagine that the response was being logged to a file. An increase in the response payload size could change the velocity with which log files take up disk-space. This, in turn, could cause issues if the log files aren't being rotated quickly enough. 
+
+Changing a response code. 
+Changing a response code is like changing a response data structure. If the consumer's logic examines the response code, the consumer may have to change their logic in order to cope with the change in response code. 
+But, what if you do something less obvious like implement ETag support. In such a case, an API that always responded with a 200 OK could suddenly start responding with a 304 Not Modified response. Such a change could cause runtime errors for a consumer that never had to deal with a functioning ETag workflow before. 
+
+Changing error types, messages, and other details. 
+When it comes to error handling, consumers implement all kinds of crazy-ass logic in order to understand the errors that are coming back from a system or module. This could mean looking at error Types and Messages. It could also mean performing string-parsing on the extended data provided in an error. As such, any change to the content of an error object could, theoretically, break the error handling logic in the consuming context. 
+
+
+EVENTS AND TIMING
+
+Changing event types. 
+An event type is akin to a method signature or a RESTful resource location. As such, if you change an event type, consumers will have to change their code in order to listen for the new events. 
+
+Changing event payloads. 
+An event payload is akin to a response structure. As such, changing an event payload incurs the same problems as changing a response structure. In so much as an &quot;additive&quot; change will likely be OK in the vast majority of cases. But, that even an &quot;additive&quot; change can cause unexpected errors depending on how the consumer is processing the event. 
+ 
+Changing the connaissance of time. 
+A consumer doesn't just consume end-points or methods, it consumes a &quot;system&quot;. As such, if a system as a whole changes the way workflows are orchestrated internally, this could be considered a breaking change. Imagine a scenario in which a DELETE request triggers a &quot;deleted&quot; event that gets pushed to a publish-and-subscribe mechanism. If &quot;deleted&quot; events went from being published instantly to being published at night in a &quot;batch job&quot;, the only thing that changed would be the &quot;connaissance of time&quot;. But, if a consumer expected those events to be published in a more immediate fashion, the consuming code may have to change in order to cope with the new timing. 
+Ok, that's maybe a bad example. But, just think of the way in which we depend on the relative timing of related actions in a system. Imagine that your database replica lag suddenly went from sub-second times to several hours. It is very likely that you would have to change your application code to deal with such a change in timing.
+
+
+API MANAGEMENT
+
 Changing rate limiting rules. 
 Changing the rate limiting strategies for a service - or implementing rate limiting for the first time - may require a consumer to refactor their invocation patterns so as not to hit a rate-limit ceiling. Or, they may have to come up with totally new strategies if a rate-limit ceiling is too low. Or, they may have to upgrade to a more substantial API subscription with higher rate limits. 
 
 Changing caching strategies. 
 If a change in caching strategies is completely transparent, then it's not a breaking change. But, the moment there's a possibility that stale data can be presented to a client, that's a breaking change (assuming that the consumer is not expecting the possibility of and / or the magnitude of such staleness). So, for example, updating an API response to read from a database replica instead of the database master is a definitely a breaking change.
  
-Changing the connaissance of time. 
-A consumer doesn't just consume end-points or methods, it consumes a &quot;system&quot;. As such, if a system as a whole changes the way workflows are orchestrated internally, this could be considered a breaking change. Imagine a scenario in which a DELETE request triggers a &quot;deleted&quot; event that gets pushed to a publish-and-subscribe mechanism. If &quot;deleted&quot; events went from being published instantly to being published at night in a &quot;batch job&quot;, the only thing that changed would be the &quot;connaissance of time&quot;. But, if a consumer expected those events to be published in a more immediate fashion, the consuming code may have to change in order to cope with the new timing. 
-Ok, that's maybe a bad example. But, just think of the way in which we depend on the relative timing of related actions in a system. Imagine that your database replica lag suddenly went from sub-second times to several hours. It is very likely that you would have to change your application code to deal with such a change in timing.
- 
 Changing content-distribution (CDN) strategies. 
 There are many benefits to moving an API behind a Content-Delivery Network (CDN). Automatic compression; image optimization; DDOS protection; to name a few. But, a CDN adds &quot;API&quot; semantics in the sense that it injects its own HTTP headers into both the request and the response data. A consumer may come to depend on those injected HTTP headers. For example, the Cloudflare CDN injects a &quot;country&quot; header that can be used to help implement geofencing internally to an application. If the application context were to be moved to another CDN that no longer injected the same HTTP headers, both internal and external consumers may have to change in order to make up for the missing data. 
 
 
-This list of potential breaking changes is not intended to be exhaustive by any means. This is simply the list that I could conjure up while noodling on this topic. That said, I hope that this sheds light on the complexities of evolving an application while it's being actively consumed. We often limit our thinking of &quot;breaking changes&quot; to invocation signatures and response objects. But, the reality is, there's a much larger set of changes that can create problems for our consumers. Evolve your applications safely and conscientiously! 
-  
-From &lt;https://www.bennadel.com/blog/3501-when-is-a-change-a-breaking-change-for-an-api.htm&gt; h, any consumer that inspects the type of an object, either declaratively as a Type annotation or imperatively with something like instanceof, will need to change their code in order to consume the new class definition. 
 
-Changing rate limiting rules. 
-Changing the rate limiting strategies for a service - or implementing rate limiting for the first time - may require a consumer to refactor their invocation patterns so as not to hit a rate-limit ceiling. Or, they may have to come up with totally new strategies if a rate-limit ceiling is too low. Or, they may have to upgrade to a more substantial API subscription with higher rate limits. 
 
-Changing caching strategies. 
-If a change in caching strategies is completely transparent, then it's not a breaking change. But, the moment there's a possibility that stale data can be presented to a client, that's a breaking change (assuming that the consumer is not expecting the possibility of and / or the magnitude of such staleness). So, for example, updating an API response to read from a database replica instead of the database master is a definitely a breaking change.
- 
-Changing the connaissance of time. 
-A consumer doesn't just consume end-points or methods, it consumes a &quot;system&quot;. As such, if a system as a whole changes the way workflows are orchestrated internally, this could be considered a breaking change. Imagine a scenario in which a DELETE request triggers a &quot;deleted&quot; event that gets pushed to a publish-and-subscribe mechanism. If &quot;deleted&quot; events went from being published instantly to being published at night in a &quot;batch job&quot;, the only thing that changed would be the &quot;connaissance of time&quot;. But, if a consumer expected those events to be published in a more immediate fashion, the consuming code may have to change in order to cope with the new timing. 
-Ok, that's maybe a bad example. But, just think of the way in which we depend on the relative timing of related actions in a system. Imagine that your database replica lag suddenly went from sub-second times to several hours. It is very likely that you would have to change your application code to deal with such a change in timing.
- 
-Changing content-distribution (CDN) strategies. 
-There are many benefits to moving an API behind a Content-Delivery Network (CDN). Automatic compression; image optimization; DDOS protection; to name a few. But, a CDN adds &quot;API&quot; semantics in the sense that it injects its own HTTP headers into both the request and the response data. A consumer may come to depend on those injected HTTP headers. For example, the Cloudflare CDN injects a &quot;country&quot; header that can be used to help implement geofencing internally to an application. If the application context were to be moved to another CDN that no longer injected the same HTTP headers, both internal and external consumers may have to change in order to make up for the missing data. 
+
+
+
+
+
+
+
+
+
+
 
 
 This list of potential breaking changes is not intended to be exhaustive by any means. This is simply the list that I could conjure up while noodling on this topic. That said, I hope that this sheds light on the complexities of evolving an application while it's being actively consumed. We often limit our thinking of &quot;breaking changes&quot; to invocation signatures and response objects. But, the reality is, there's a much larger set of changes that can create problems for our consumers. Evolve your applications safely and conscientiously! 
@@ -219,7 +202,7 @@ This is one of the least acceptable definitions from an engineering point of vie
 
 From a project manager perspective, it’s not as simple but still very broad.
 
-“Breaking changes” are only breaking if existing integrations begin to fail.  Any other changes should be to be absorbed and isolated on the consumer side. So any signature changes that are required, not just optional,or any change to existing data structure, like renaming a field.
+“Breaking changes” are only breaking if existing integrations begin to fail.  Any other changes should be able to be absorbed and isolated on the consumer side. So any signature changes that are required, or any change to existing data structure would constitute a breaking change.
 
 This definitions serves as a pretty good mission or goal statement for what engineers should strive for, but it lacks the specifics to know how to implement it or examples for when it is broken.
 
@@ -227,7 +210,11 @@ At this point, we have four samples of what breaking changes could be.  Even fro
 
 What changes can be “breaking”
 
-To make this exercise a bit easier, we will examine broad areas and provide specific examples of how a developer can create breaking changes in each.  The areas we will examine will be code (both invocation and result), data, events, and time.
+To make this exercise a bit easier, we will examine broad areas and provide specific examples of how a developer can create breaking changes in each.  The areas we will examine will be:
+Code
+Data
+API Management
+Events and Timing
 
 Code
 
@@ -235,17 +222,86 @@ This is probably the most obvious place where breaking changes can occur, but we
 
 Changing a function, method, or endpoint name
 
-Starting with an easy one.  If a developer changes the name of a function in a library or proxy wrapper, or they change the location or name of an API endpoint, it’s a breaking change.  The reasons for this are pretty clear.  If another team updates a library and the name of a function is different, the build breaks.  For API endpoints, the change is more subtle as there is no compile time check of this and thus code will just break in a live system.  
+Starting with an easy one.  If a developer changes the name of a function in a library or proxy wrapper, or they change the location or name of an API endpoint, it’s a breaking change.  The reasons for this are pretty clear.  If another team updates a library and the name of a function is different, the build breaks.  For API endpoints and non-compiled languages, the change is more subtle as there is no compile time check of this and thus code will just break in a live system.  
 
 ￼
+Figure: Change of function name causing an error
 
-Now, of course, there are good arguments to be made that versioning should help to alleviate these concerns, and those arguments are completely valid.  This will be a repeating theme through out this paper, there aren’t any new situations or problems that arise, and all that do have relatively easy solutions.  The point of bringing these situations to light is to highlight the issue of breaking changes as a frame for us to propose a new methodology for handling them.  We will discuss this new paradigm at great length in later portions of this paper, but it helps to keep in mind that the main tenants of this new methodology aren’t new and as really just a collection of strategies and purposeful development aimed at preventing breaking changes in largely distributed code bases.
+Now, of course, there are good arguments to be made that versioning should help to alleviate these concerns, and those arguments are completely valid.  This will be a repeating theme through out this paper; there aren’t any new situations or problems that arise, and all that do have relatively easy solutions.  The point of bringing these situations to light is to highlight the issue of breaking changes as a frame for us to propose a new methodology for handling them.  We will discuss this new paradigm at great length in later portions of this paper, but it helps to keep in mind that the main tenants of this new methodology aren’t new and are really just a collection of strategies and purposeful development practices aimed at preventing breaking changes in largely distributed code bases.
 
 Changing an invocation signature
 
 While this seems straight forward, it is worth while to examine and point out two disparate use cases here.  The first is, obviously, changing the type or number of required parameters on a method or an API endpoint. If this occurs in a library, once that library is updated a compile time error gets thrown, solution broken.  Again, for APIs this break is more subtle, and live apps will just begin to fail.
 
 ￼
+
+Figure: Adding an extra parameter to a signature
+
+Now, let’s reflect on optional parameters in a function.  This scenario is a great example of the kind of subtleties that have to be kept in mind by all teams across.  Optional parameters first appear to be the exact solution to keep breaking changes from sneaking into API code; however, if these optional parameters change the basic behavior of endpoint or will revert to a default value if left empty, these would be considered breaking since.  Now, this change will not cause compilation errors, nor will the call fail, but if the data coming out of the API is in any way different, that is breaking.  Assuming proper unit and integration tests are in place, this can of break should be caught early, but there is a very real possibility of it silently sneaking into a production system and not being noticed before it reaches a user.
+
+Let’s take a look at a very specific example of how this can happen.  
+
+￼
+Illustration: 
+
+
+
+Changing a classes functions or testable hierarchies
+
+Lastly, in the purely code category, we are going to examine one case that would be probably be missed by most coders and peer reviewers.  We know that changing a data structure isn’t necessarily a breaking change, we know that if we alter any existing fields in a return object or the class that models it, this would be breaking.  Now what about the class itself?  Can we make alterations to it without it being considered a breaking change? The answer, like for data structure, is sometimes.  If fields are added, downstream implementers should be coding defensively and be prepared to handle this.  If functions change, this may or may not be breaking; so long as a function still outputs the same data, in the same format it isn’t breaking.  But this line of thought brings up two possible areas of concern.  If a class function has a minor bug, but is shipped out in version 1 and is being actively consumed, is the fix for that bug a breaking change? Yes! 
+
+Image you are creating a Menu API that returns product Ids for all products you are attempting to sell online.  Version 1 of you API prefixes all Ids with the symbol ‘#’.  Now that field was defined as string, so there is no breaking change there.  However, when you attempt to place an item in your cart, the product id you pass in can only be an integer, meaning a client must strip of any leading ‘#’ characters before submitting.  If your engineering team fixes that bug, there is a very good chance that downstream clients will fail because their code expects a throwaway value in the very first position and are trying to account for it.  
+
+￼
+Illustration: Menu and Cart API 
+
+Maybe that one wasn’t as easy to miss, so let’s try for one that is really tricky.  Imagine we are working with our API and we want to create a base class (poorlyNameResponseBaseClassName) that holds a few of our most used fields: payload, errors, http status.  We extend this base class for use in all our response objects served up by our API.  For example, if we request a Menu from our API, we can expect to get a MenuReponse object that inherits from this base class, overriding payload with a specific type of MenuObject.  This idea should be a straight forward example of a realistic class hierarchy.  
+
+￼
+Illustration: Base class and Derived class
+
+
+As we discussed before, it is common to provide client packages or SDKs when publishing APIs, and being good stewards of our code, we have done just that.  However, we now realize that the version 1 class name of ‘poorlyNamedResponseBaseClassName’ is indeed poorly named.  We want to change that to ‘ResponseBaseClass’.  Updates to the server code and the client SDK are sent out.  When a client updates to that latest package, they will start getting errors if they ever try to reference a specific response (IE MenuResponse) by its base class name, or they try to test an object with something like ‘instanceof’ to see if it can be identified as a derived type of ‘poorlyNamedResponseBaseClassName’.  This counts as a breaking change and there is high probability a change such as this would breeze through code review and internal testing without raising any red flags.
+
+
+
+Data
+
+So we have covered purely code related details.  That’s the only real place a breaking change can occur, right?  If you don’t make a code change, you can’t make a breaking change.  Well, let’s look at some breaking changes that occur when altering data, data types, and data structures.  While a lot of these are defined in code, it is worth looking at these kind of changes as their own category.
+
+Changing a response structure
+
+As we have hinted towards in the code section, if data changes, this can be a breaking change.  Let’s first look at response structures; this will include response envelopes and the pure data structures they can wrap.  The first possibility of change in a data structure, an element gets removed.  Review our ResponseBaseClass object, we have planned to include payload, errors, and HTTP status.  This appears to be a well planned out class, but do we really need to include HTTP status in the message body since it is part of the http response itself? If we have already released this in version 1, then we absolutely have to keep it; removing it would be a breaking change.  Any downstream consumer that expects to be able to check this element will fail if it suddenly isn’t there.
+
+￼
+Illustration: Base class
+
+
+Is that the only way we can cause a breaking change, by removing elements? What about adding a field? It can’t cause a break because the client was expecting it and didn’t receive it, it’s brand new.  We could delve into more archaic issues like fixed width files, delimited files, or even storage limitations on the client side, and while those are valid considerations, it is likely that they are not the most common issues you will run into when creating your APIs. What about any data lake or data analytics considerations? Will adding data structures cause errors in their processing or reporting? What about the actual parsing of the data? Most responses will be in JSON format.  If a client deserializes a response into a class, what happens to the extra fields?  Most public parsers handle this without a problem, most but not all.  That also doesn’t account for parsers that were rolled by the developers.  What about other formats?  What about XML parsers?  These tend to be the most frustrating breaking changes.  It is easy as a developer, as a manager, as a peer review, to assume that this is a solved problem and not worry about downstream consequences because in most cases they never become an issue.  When they do, they tend to be a major production issue.  While frustrating for the API developer, this is also one case that doesn’t fall on them to fix.  This is, however, a great illustration of why there needs to be discussion around changes and mitigation techniques.  
+
+Changing a response code
+
+Any 2xx status back from an API means success, right? If someone makes a request from ‘api/v1/Menu/123’ will any 2xx status also send a response object? What if a client only checks for a MenuResponse on 200, but your team decides to start sending status 206 if the store only has ‘Limited offerings’ or status 202 because your team decides it’s best to acknowledge that a request was ‘Accepted’ and therefore will have a valid return object.  While shipping over a response payload for more HTTP response types is likely not a breaking change, altering what the established response codes are for a given endpoint may very well break clients downstream.
+
+￼
+Illustration: Menu endpoint yaml
+ 
+
+Changing error types, messages, or other details
+
+Thinking back to our ResponseBaseClass, we included errors as one of our elements.  Now, we normally don’t want to spit out a stack trace for consumers to figure out, we want to provide some detailed, actionable information.  To that end, the error element actually consists of a friendly error message, a unique error code that a developer could use to track down more information, a friendly error code that can be used to allow consumers to look up more information through something like a developer portal, and a flag that indicates whether or not this is request can be tried again or if all future calls will continue to fail. 
+
+￼
+Illustration: ResponseBaseClass with error structure
+
+ This is very similar to changing response codes.  While it may not be the intention that specific error codes would trigger a different portion of code to run, it is understandable and can definitely be expected that logging/monitoring would be impacted by changing these things.  
+
+
+
+
+Events and Timing
+
+So w
 
 </Text>
         </Document>
@@ -255,6 +311,68 @@ While this seems straight forward, it is worth while to examine and point out tw
         </Document>
         <Document ID="13">
             <Title>MissingImage</Title>
+        </Document>
+        <Document ID="14">
+            <Title>Outline</Title>
+            <Text>Introduction
+
+
+Define the problem
+
+-with examples:
+--Changing a function, method, or endpoint name
+--Changing an invocation signature
+--Changing a response structure
+--Changing a response code
+--Changing event types
+--Changing error types, messages, and other details
+--Changing event payloads
+--Changing testable class hierarchies
+--Changing method or resource name
+--Changing rate limiting rules
+--Changing caching strategies
+--Changing connaissance of time
+--Changing content-distribution (CDN) strategies
+
+What is additive only
+
+
+What teams are needed to support additive only development?
+-front/back end Devs, DBAs, DevOps
+-explanation of additive only being a culture that everyone needs to be mindful of
+
+
+How to apply additive only
+-For APIs
+-For databases
+-For core system modules
+
+How does additive only fix our previous breaking change examples?
+-Changing a function, method, or endpoint name
+-Changing an invocation signature
+-Changing a response structure
+-Changing a response code
+-Changing event types
+-Changing error types, messages, and other details
+-Changing event payloads
+-Changing testable class hierarchies
+-Changing method or resource name
+-Changing rate limiting rules
+-Changing caching strategies
+-Changing connaissance of time
+-Changing content-distribution (CDN) strategies
+</Text>
+        </Document>
+        <Document ID="15"/>
+        <Document ID="16"/>
+        <Document ID="17">
+            <Title>Sample API</Title>
+            <Text>We make an online ordering API
+
+We make server code and a client package/sdk
+
+
+</Text>
         </Document>
     </Documents>
 </SearchIndexes>

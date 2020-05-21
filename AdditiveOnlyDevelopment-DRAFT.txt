@@ -1,0 +1,115 @@
+
+
+
+
+
+
+Introduction
+In the current landscape of micro services, with development teams focused primarily on new features or bug fixes, there is an emerging trend that developers and product managers need to content with "breaking changes" that can be introduced into a system.  In past years, breaking changes were often confined to a single team, or in some cases two teams, and communication of the changes were relatively simple; developers knew what pieces of their monoliths were being used other pieces inside the same solution.  As the era of monoliths comes to a close and the era of micro services and REST API endpoints takes more and more mind share, this control process of "breaking changes" becomes much more difficult to define, address, and prevent.
+
+The aim of this article is to present one such solution.  It will delve into the strict definition and its strict implementation, as well as a more practical recommendation to its adoption.  Like so many other process and technical solutions, there is a die hard path, an avoidance path, and a path of least resistance.  This article will strive to provide a path of least resistance for implementing this potential process solution into an existing development life cycle.
+
+We will examine what situations cause a breaking change, try to come to a standard definition of what is a breaking change, and explore how to leverage this new methodology across each of the situations we define.  It will help, to keep in mind that the main tenants of this new methodology aren’t new and are really just a collection of strategies and purposeful development aimed at preventing breaking changes in largely distributed code bases.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What is the problem of breaking changes?
+What does “breaking change” mean?
+
+The term “breaking change” can mean different things to different people, especially if as we cross organizational lines.  What is a breaking change to a developer working on integration can be a very different thing than a breaking change to a team member on a UI/UX/CX team, which is very different from a product manager who only cares if an application is live and usable by the end customers.
+
+Let’s look at a few examples of what a breaking change could be, from the perspective of different stakeholders.
+
+From a developer creating a back-end service available via a REST API, a breaking change could summarized as follows.
+
+As long as the consumer doesn’t have to change the how they call this endpoint, it isn’t a breaking change.  Data structure changes, adding parameters, changing what we return should all be fine, as long as the existing calls don’t fail to resolve.
+
+This description seems reasonable.  If additional, optional, parameters are added to a function or a REST endpoint, that means consumers don’t have to update their code.  However, do the default values for these optional values give the same response as earlier versions of the functions? Data structure additions can’t break existing mapping since consumers wouldn’t be looking for these fields.  Unless the parser they are using to map into objects throws an error for unknown data fields. While both of these concerns can easily be designed for, it is easily overlooked when initially starting development work, or if there hasn’t been a clear decision to design for it at the onset
+
+From a front end developer, the definition of a breaking change would be similar.
+
+The signature of an API/wrapper function can’t change and the data has to be the same so it maps to the UI correctly still.
+
+Again, from a front end prospective, that is a reasonable expectation.  It does still require some measure of prevention on the UI side, such as ensuring they are defensively mapping from the model to the view model. Is this enough of a definition though? Are there other things that should be included? Let’s look at some additional examples.
+
+From a product managers perspective, a breaking change could be less specific.
+
+A “breaking change” is any change that means customers can’t use the system to do their work.  If there is a work around, it’s not breaking.
+
+This is one of the least acceptable definitions from an engineering point of view.  It doesn’t have any strict requirements and is only concerned whether a bug would break an SLA or would result in a high severity ticket being submitted.
+
+From a project manager perspective, it’s not as simple but still very broad.
+
+“Breaking changes” are only breaking if existing integrations begin to fail.  Any other changes should be to be absorbed and isolated on the consumer side. So any signature changes that are required, not just optional,or any change to existing data structure, like renaming a field.
+
+This definitions serves as a pretty good mission or goal statement for what engineers should strive for, but it lacks the specifics to know how to implement it or examples for when it is broken.
+
+At this point, we have four samples of what breaking changes could be.  Even from these, it is should start to become apparent that “breaking change” is a term with an elusive definition.  Let’s approach this from a different direction then; if different groups have different definitions, we should be able to start combining them and at least get a list of things that would be considered a breaking change.  Once we have a more complete list of what a breaking change is, we can then try to define it more succinctly.
+
+What changes can be “breaking”
+
+To make this exercise a bit easier, we will examine broad areas and provide specific examples of how a developer can create breaking changes in each.  The areas we will examine will be code (both invocation and result), data, events, and time.
+
+Code
+
+This is probably the most obvious place where breaking changes can occur, but we are going to isolate what is included here to cover only invocation of code and results returned to the customer without delving into any data, event, or time specific aspects.
+
+Changing a function, method, or endpoint name
+
+Starting with an easy one.  If a developer changes the name of a function in a library or proxy wrapper, or they change the location or name of an API endpoint, it’s a breaking change.  The reasons for this are pretty clear.  If another team updates a library and the name of a function is different, the build breaks.  For API endpoints and non-compiled languages, the change is more subtle as there is no compile time check of this and thus code will just break in a live system.  
+
+ 
+
+Now, of course, there are good arguments to be made that versioning should help to alleviate these concerns, and those arguments are completely valid.  This will be a repeating theme through out this paper; there aren’t any new situations or problems that arise, and all that do have relatively easy solutions.  The point of bringing these situations to light is to highlight the issue of breaking changes as a frame for us to propose a new methodology for handling them.  We will discuss this new paradigm at great length in later portions of this paper, but it helps to keep in mind that the main tenants of this new methodology aren’t new and as really just a collection of strategies and purposeful development aimed at preventing breaking changes in largely distributed code bases.
+
+Changing an invocation signature
+
+While this seems straight forward, it is worth while to examine and point out two disparate use cases here.  The first is, obviously, changing the type or number of required parameters on a method or an API endpoint. If this occurs in a library, once that library is updated a compile time error gets thrown, solution broken.  Again, for APIs this break is more subtle, and live apps will just begin to fail.
+
+ 
+
+Now, let’s reflect on optional parameters in a function.  This scenario is more
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What is 'Additive Only' Development
+I would like to introduce a new a term
